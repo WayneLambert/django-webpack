@@ -21,8 +21,12 @@ btnUsersApi.addEventListener('click', () => {
 // Calculate Area of Circle
 const btnCalculateArea = document.getElementById('btn-area-of-circle')
 btnCalculateArea.addEventListener('click', () => {
-  const circle = require('./examples/circle')
+  const circle = require('./examples/circle.ts')
+  const radiusEl = document.getElementById('radius-of-circle')
+  const radius = parseInt(radiusEl.value)
+  const area = circle.area(radius)
+  const result = `The area of a circle with a radius of ${radius} is ${area}`
+  console.log(result)
   const areaOfCircle = document.getElementById('area-of-circle')
-  console.log('The area of a circle of radius 4 is ' + circle.area(4))
-  areaOfCircle.innerHTML = 'The area of radius 4 is ' + circle.area(4)
+  areaOfCircle.textContent = result
 })

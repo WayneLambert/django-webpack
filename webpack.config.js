@@ -6,6 +6,9 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.ts', '...'],
+  },
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     port: 8080,
@@ -34,6 +37,11 @@ module.exports = {
             loader: 'sass-loader',
           },
         ],
+      },
+      {
+        test: /\.ts$/i,
+        use: 'ts-loader',
+        exclude: '/node_modules/',
       },
     ],
   },
