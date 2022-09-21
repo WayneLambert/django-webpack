@@ -1,12 +1,17 @@
 // Import our CSS from Sass file for 3rd party vendors and custom
 import './core/static/scss/styles.scss'
 
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
-
 // Flatpickr
 import flatpickr from 'flatpickr/dist/flatpickr.min'
 import './core/static/vendor/flatpickr.js'
+
+import Alpine from 'alpinejs'
+
+// Add Alpine object to the window scope
+window.Alpine = Alpine
+
+// initialize Alpine
+Alpine.start()
 
 // Invoke Users API
 const getUserModule = () =>
