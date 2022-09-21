@@ -10,11 +10,6 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '...'],
   },
-  devServer: {
-    static: path.resolve(__dirname, 'static/dist'),
-    port: 8080,
-    hot: true,
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './templates/base_webpack.html',
