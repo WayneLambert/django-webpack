@@ -61,3 +61,131 @@ bpython = "0.23"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+# -- PYLINT CONFIG ----------------------------------------------------------------------
+
+[tool.pylint.master]
+jobs="0"    # Auto-detect the number of processors
+fail-under="10"
+ignore-patterns='''
+  \.eggs
+  |_build
+  |\.git
+  |\.hg
+  |\.mypy_cache
+  |\.tox
+  |\.venv
+  |buck-out
+  |build
+  |conf.py
+  |dist
+'''
+persistent = "no"
+load-plugins = ["pylint_django"]
+django-settings-module = "aa_project.settings"
+limit-inference-results = "100"
+suggestion-mode = "yes"
+unsafe-load-any-extension = "no"
+extension-pkg-whitelist = ""
+exit-zero = "no"
+from-stdin = "no"
+
+[tool.pylint.message_control]
+enable = [
+  "F",  # Fatal
+  "E",  # Error
+  "W",  # Warning
+  "R",  # Refactor
+  "C",  # Convention
+  "I",  # Informational
+]
+disable = """
+  attribute-defined-outside-init,
+  line-too-long,
+  missing-class-docstring,
+  missing-function-docstring,
+  missing-module-docstring,
+  no-self-use,
+"""
+
+[tool.pylint.reports]
+reports = "no"
+msg-template = "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}"
+output-format = "colorized"
+score = "no"
+
+[tool.pylint.format]
+max-line-length = "99"
+
+[tool.pylint.basic]
+good-names = "_, qs, pk"
+
+[tool.pylint.miscellaneous]
+notes="TODO, FIXME, DEBUG, NOTE, DONE, TEMP BLOCK"
+
+# -- BLACK CONFIG -----------------------------------------------------------------------
+
+[tool.black]
+line-length = 99
+skip-string-normalization = true
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+# -- ISORT CONFIG -----------------------------------------------------------------------
+
+[tool.isort]
+atomic = true
+line_length = 99
+profile = "black"
+include_trailing_comma = true
+force_single_line = false
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+skip_glob = "*/.venv/*, */node_modules/*, */.git/*, */migrations/*"
+
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "DJANGO",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+    "PUBLIC",
+    "TENANTED"
+]
+known_django = "django"
+known_third_party = [
+  "PIL",
+  "captcha",
+  "celery",
+  "dj_database_url",
+  "googlemaps",
+  "factory",
+  "localflavor",
+  "mixer",
+  "ninja",
+  "phonenumber_field",
+  "pytest",
+  "rest_framework",
+  "rich",
+  "sequences",
+]
+known_public = [
+    "core",
+]
+known_tenanted = [
+]

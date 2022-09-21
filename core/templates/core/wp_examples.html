@@ -48,5 +48,23 @@
 
     <hr class="col-6" />
 
+    <button
+      hx-get="{% url 'htmx_example' %}"
+      hx-swap="innerHTML"
+      hx-target="#htmx-div"
+      class="btn btn-secondary"
+    >
+      Insert HTMX Response into DOM
+    </button>
+    <div class="pt-3" id="htmx-div"></div>
+
+    <hr class="col-6" />
+
+    <div x-data="{showMe: false, msg: 'Hello from Alpine'}">
+      <p x-show="showMe" x-text="msg"></p>
+      <button class="btn btn-secondary" @click="showMe = !showMe">Toggle</button>
+    </div>
+
+    <hr class="col-6" />
   </div>
 {% endblock content %}
