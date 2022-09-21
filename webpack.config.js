@@ -1,19 +1,28 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'static'),
   },
   resolve: {
     extensions: ['.ts', '...'],
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'static/dist'),
     port: 8080,
     hot: true,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './templates/base_webpack.html',
+      filename: '../core/templates/core/base.html',
+      publicPath: '/static/',
+      xhtml: true,
+    }),
+  ],
   module: {
     rules: [
       {
@@ -44,5 +53,17 @@ module.exports = {
         exclude: '/node_modules/',
       },
     ],
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
 }
