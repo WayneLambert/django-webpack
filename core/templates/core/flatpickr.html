@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="container p-2 mx-auto">
+    <!-- Flatpickr Test Element -->
+    <div class="pt-3">
+      <h5>Flatpickr Test Element</h5>
+      <div class="col-sm-2">
+        <div id="div_id_business_update_form-registration_date" class="mb-3">
+          <label for="id_business_update_form-registration_date" class="form-label requiredField">
+              Registration Date<span class="asteriskField">*</span>
+          </label>
+            <input
+              type="text" name="business_update_form-registration_date" value="2017-11-15"
+              class="js-flatpickr form-control form-control-hover-light form-select-hover-light sitedateinput"
+              tag="fp-date" placeholder="Select Date..." required="" id="id_business_update_form-registration_date"
+            />
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

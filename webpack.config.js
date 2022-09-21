@@ -5,6 +5,8 @@ module.exports = {
   entry: {
     index: './core/static/scripts/index.js',
     vendor: './core/static/scripts/vendor.js',
+    users: './core/static/scripts/users.js',
+    circle: './core/static/scripts/circle.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -16,7 +18,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './templates/base_webpack.html',
-      filename: '../core/templates/core/base.html',
+      filename: '../core/templates/core/_base.html',
       publicPath: '/static/',
       xhtml: true,
     }),

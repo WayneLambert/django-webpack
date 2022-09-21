@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block content %}<div class="container p-2 mx-auto">
+  <div class="pt-3">
+    <h5>HTMX Example</h5>
+      <button
+        hx-get="{% url 'core:hx_fetch_htmx' %}"
+        hx-swap="innerHTML"
+        hx-target="#htmx-div"
+        class="btn btn-secondary"
+      >
+        Insert HTMX Response into DOM
+      </button>
+      <div class="pt-3" id="htmx-div"></div>
+    </div>
+  </div>
+{% endblock content %}
