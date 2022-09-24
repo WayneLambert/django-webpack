@@ -1,5 +1,7 @@
 import os
+
 from pathlib import Path
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -55,6 +57,12 @@ DEBUG_TOOLBAR_PANELS = [
     "debug_toolbar.panels.redirects.RedirectsPanel",
 ]
 SHOW_TOOLBAR_CALLBACK = True
+
+
+def skip_debug_requests(record):
+    """Prevent logging of debug requests to the console"""
+    return not str(record.args[0]).startswith('GET /__debug__/')
+
 
 ROOT_URLCONF = "aa_project.urls"
 
@@ -140,3 +148,42 @@ SHELL_PLUS_IMPORTS = [
     "from rich import inspect, pretty, print",
     "from rich.console import Console",
 ]
+
+# Logging Configuration (including colorised output from Rich)
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'skip_debug_requests': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': skip_debug_requests,
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'formatters': {
+        'rich': {'datefmt': '[%X]'},
+    },
+    'handlers': {
+        'console': {
+            'class': 'rich.logging.RichHandler',
+            'formatter': 'rich',
+            'level': 'INFO',
+            'filters': ['skip_debug_requests', 'require_debug_true'],
+            'rich_tracebacks': True,
+            'tracebacks_show_locals': True,
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
