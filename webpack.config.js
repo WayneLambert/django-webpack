@@ -4,8 +4,8 @@ const BundleTracker = require('webpack-bundle-tracker')
 
 module.exports = {
   entry: {
-    index: './core/static/index.js',
-    vendor: './core/static/scripts/vendor.js',
+    index: './core/assets/index.js',
+    vendor: './core/assets/scripts/vendor.js',
   },
   output: {
     path: path.resolve(__dirname, 'static'),
