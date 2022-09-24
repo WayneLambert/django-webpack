@@ -1,16 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleTracker = require('webpack-bundle-tracker')
 
 module.exports = {
   entry: {
-    index: './core/static/scripts/index.js',
+    index: './core/static/index.js',
     vendor: './core/static/scripts/vendor.js',
-    users: './core/static/scripts/users.js',
-    circle: './core/static/scripts/circle.js',
   },
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'static'),
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   resolve: {
     extensions: ['.ts', '...'],
@@ -21,6 +21,9 @@ module.exports = {
       filename: '../core/templates/core/_base.html',
       publicPath: '/static/',
       xhtml: true,
+    }),
+    new BundleTracker({
+      filename: './core/static/webpack-stats.json',
     }),
   ],
   module: {

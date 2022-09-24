@@ -1,0 +1,43 @@
+{
+  "status": "done",
+  "assets": {
+    "index.bundle.js": {
+      "name": "index.bundle.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/index.bundle.js"
+    },
+    "vendor.bundle.js": {
+      "name": "vendor.bundle.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/vendor.bundle.js"
+    },
+    "runtime.bundle.js": {
+      "name": "runtime.bundle.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/runtime.bundle.js"
+    },
+    "usersAPI.bundle.js": {
+      "name": "usersAPI.bundle.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/usersAPI.bundle.js"
+    },
+    "vendors.bundle.js": {
+      "name": "vendors.bundle.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/vendors.bundle.js"
+    },
+    "../core/templates/core/_base.html": {
+      "name": "../core/templates/core/_base.html",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html"
+    }
+  },
+  "chunks": {
+    "index": [
+      "runtime.bundle.js",
+      "vendors.bundle.js",
+      "index.bundle.js"
+    ],
+    "vendor": [
+      "runtime.bundle.js",
+      "vendors.bundle.js",
+      "vendor.bundle.js"
+    ]
+  },
+  "error": "ModuleNotFoundError",
+  "message": "Module not found: Error: Can't resolve './examples/usersAPI.js' in '/Users/wayne-lambert/dev/webpack-example/src/core/static'"
+}

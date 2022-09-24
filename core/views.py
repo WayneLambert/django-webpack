@@ -12,11 +12,6 @@ def flatpickr(request):
     return render(request, "flatpickr.html", {})
 
 
-def users_api(request):
-    """Example returning arbitrary Users' API"""
-    return render(request, "users.html", {})
-
-
 def area_of_circle(request):
     """
     Example returning calculation for the area of a circle using a
