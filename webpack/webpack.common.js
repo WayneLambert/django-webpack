@@ -11,8 +11,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './webpack/templates/base_webpack.html',
-      filename: './core/templates/core/_base.html',
-      publicPath: '/static',
+      filename: '../../core/templates/core/_base.html',
+      publicPath: '/static/bundles',
       xhtml: true,
     }),
   ],
