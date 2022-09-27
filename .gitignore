@@ -176,4 +176,5 @@ prod.env
 # Project Directories/Files
 endpoint.rest
 
-node_modules/*
+node_modules
+static

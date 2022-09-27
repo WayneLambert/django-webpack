@@ -1328,11 +1328,16 @@ python-versions = "*"
 
 [[package]]
 name = "pywatchman"
-version = "1.4.1"
+version = "1.4.2.dev1"
 description = "Watchman client for python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://test.pypi.org/simple"
+reference = "test"
 
 [[package]]
 name = "pyxdg"
@@ -1617,7 +1622,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "==3.9.10"
-content-hash = "dfd0c4fda234088e19fe09c51aecb65d8ece2c050577dcc33c34481035c1c05d"
+content-hash = "75c5f38ce91f33d2f164bf0542f6c4e759ec61f709de107f16cddf15e562c1ef"
 
 [metadata.files]
 amqp = [
@@ -2380,7 +2385,19 @@ pytz = [
     {file = "pytz-2021.3.tar.gz", hash = "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"},
 ]
 pywatchman = [
-    {file = "pywatchman-1.4.1.tar.gz", hash = "sha256:d0047eb275deafb0011eda0a1a815fbd9742478c3d2b5ad6956d300e447dc2f9"},
+    {file = "pywatchman-1.4.2.dev1-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:10b731e14785d02a855a3e700e913be189357b5823cbd2a5dee14e3fa5658340"},
+    {file = "pywatchman-1.4.2.dev1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4096579025852dcc67fcf92efac3d62946e51ecdb7be85e41aa52d495511e6e0"},
+    {file = "pywatchman-1.4.2.dev1-cp36-cp36m-macosx_12_0_arm64.whl", hash = "sha256:ac99dc14a8594b52e93da42ff548a8d70e272355ad070667ded62fbb52328219"},
+    {file = "pywatchman-1.4.2.dev1-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ca52dcc04659d24b76116881201dad8561351fbf2ce26bd19765ec96d89908cc"},
+    {file = "pywatchman-1.4.2.dev1-cp37-cp37m-macosx_12_0_arm64.whl", hash = "sha256:ae9222cf359261b500f08086c88b2f755d3114994272416ca346a89c4cf57af6"},
+    {file = "pywatchman-1.4.2.dev1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3970cbeefa506cd07eaf22ef68c3dd6b857f7a8112bef4b038fa6b688cbc473a"},
+    {file = "pywatchman-1.4.2.dev1-cp38-cp38-macosx_12_0_arm64.whl", hash = "sha256:cc2fee209d7ad440f986bcb39c4292ece980abb2456356312b2bd6ac9d354186"},
+    {file = "pywatchman-1.4.2.dev1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ca106139f988f3f80718ad43764fe7964f28eceb500a63e6fa28ce7731637004"},
+    {file = "pywatchman-1.4.2.dev1-cp39-cp39-macosx_12_0_arm64.whl", hash = "sha256:615a76c0425b04dfc61b401dd0b215695ec90b3a8f805ee7037946e107d7b91b"},
+    {file = "pywatchman-1.4.2.dev1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:91d4b66c3ebbfb9c4ad53147aa606aff8cc40c80abb7a1b60df1959f8e4fe0ce"},
+    {file = "pywatchman-1.4.2.dev1-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:cae06f51b300ba2fd7ca5d12701f20ae0d70ff20685dcdfc735e78fe02f165aa"},
+    {file = "pywatchman-1.4.2.dev1-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a9ba4e33db6cf4e01a2b139a05f1240f826bfb13dd225e42775cfd2769482dea"},
+    {file = "pywatchman-1.4.2.dev1.tar.gz", hash = "sha256:fc166d922f1c8bd9cf8570d88ecd55b79579e0e0c6298ca9be13c45ff2698f7b"},
 ]
 pyxdg = [
     {file = "pyxdg-0.28-py2.py3-none-any.whl", hash = "sha256:bdaf595999a0178ecea4052b7f4195569c1ff4d344567bccdc12dfdf02d545ab"},

@@ -17,9 +17,9 @@
       "name": "vendors.bundle.js",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/vendors.bundle.js"
     },
-    "../core/templates/core/_base.html": {
-      "name": "../core/templates/core/_base.html",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html"
+    "./core/templates/core/_base.html": {
+      "name": "./core/templates/core/_base.html",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/core/templates/core/_base.html"
     }
   },
   "chunks": {
