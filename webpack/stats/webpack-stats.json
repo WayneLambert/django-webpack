@@ -1,21 +1,13 @@
 {
   "status": "done",
   "assets": {
-    "index.js": {
-      "name": "index.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/index.js"
+    "js/index.js": {
+      "name": "js/index.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.js"
     },
-    "vendor.js": {
-      "name": "vendor.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/vendor.js"
-    },
-    "runtime.js": {
-      "name": "runtime.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/runtime.js"
-    },
-    "vendors.js": {
-      "name": "vendors.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/vendors.js"
+    "js/vendor.js": {
+      "name": "js/vendor.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.js"
     },
     "../../core/templates/core/_base.html": {
       "name": "../../core/templates/core/_base.html",
@@ -24,14 +16,10 @@
   },
   "chunks": {
     "index": [
-      "runtime.js",
-      "vendors.js",
-      "index.js"
+      "js/index.js"
     ],
     "vendor": [
-      "runtime.js",
-      "vendors.js",
-      "vendor.js"
+      "js/vendor.js"
     ]
   }
 }
