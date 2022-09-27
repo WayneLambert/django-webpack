@@ -177,4 +177,4 @@ prod.env
 endpoint.rest
 
 node_modules
-static
+static/bundles/*
