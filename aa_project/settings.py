@@ -59,9 +59,9 @@ DEBUG_TOOLBAR_PANELS = [
 SHOW_TOOLBAR_CALLBACK = True
 
 
-def skip_debug_requests(record):
-    """Prevent logging of debug requests to the console"""
-    return not str(record.args[0]).startswith('GET /__debug__/')
+def skip_debug_toolbar_requests(record):
+    """Prevent logging of debug toolbar requests to the console"""
+    return not str(record.args[0]).startswith('GET /static/debug_toolbar/')
 
 
 ROOT_URLCONF = "aa_project.urls"
@@ -152,9 +152,9 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'filters': {
-        'skip_debug_requests': {
+        'skip_debug_toolbar_requests': {
             '()': 'django.utils.log.CallbackFilter',
-            'callback': skip_debug_requests,
+            'callback': skip_debug_toolbar_requests,
         },
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue',
@@ -168,7 +168,7 @@ LOGGING = {
             'class': 'rich.logging.RichHandler',
             'formatter': 'rich',
             'level': 'INFO',
-            'filters': ['skip_debug_requests', 'require_debug_true'],
+            'filters': ['skip_debug_toolbar_requests', 'require_debug_true'],
             'rich_tracebacks': True,
             'tracebacks_show_locals': True,
         }

@@ -1,6 +1,10 @@
 {
   "status": "done",
   "assets": {
+    "images/header..jpg": {
+      "name": "images/header..jpg",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header..jpg"
+    },
     "js/index.js": {
       "name": "js/index.js",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.js"
@@ -21,5 +25,7 @@
     "vendor": [
       "js/vendor.js"
     ]
-  }
+  },
+  "error": "ModuleNotFoundError",
+  "message": "Module not found: SyntaxError: /Users/wayne-lambert/dev/webpack-example/src/package.json (directory description file): SyntaxError: Unexpected token } in JSON at position 267"
 }
