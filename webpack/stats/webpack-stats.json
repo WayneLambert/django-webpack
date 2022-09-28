@@ -25,7 +25,5 @@
     "vendor": [
       "js/vendor.js"
     ]
-  },
-  "error": "ModuleNotFoundError",
-  "message": "Module not found: SyntaxError: /Users/wayne-lambert/dev/webpack-example/src/package.json (directory description file): SyntaxError: Unexpected token } in JSON at position 267"
+  }
 }
