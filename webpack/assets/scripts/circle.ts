@@ -1,7 +1,7 @@
 // Calculate Area of Circle
 const btnCalculateArea = document.getElementById('btn-area-of-circle')
 btnCalculateArea.addEventListener('click', () => {
-  const circle = require('../examples/circle.ts')
+  const circle = require('../examples/circleArea.ts')
   const radiusEl = document.getElementById('radius-of-circle')
   const radius = parseInt(radiusEl.value)
   const area = circle.area(radius)
