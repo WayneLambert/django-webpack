@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "webpack/assets/scripts",
+        "outDir": "static/bundles/js",
         "noImplicitAny": true,
         "module": "es6",
         "target": "es5",

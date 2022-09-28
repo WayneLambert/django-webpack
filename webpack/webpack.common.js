@@ -1,3 +1,4 @@
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -9,14 +10,6 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '...'],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './webpack/templates/base_webpack.html',
-      filename: '../../core/templates/core/_base.html',
-      publicPath: '/static/bundles',
-      xhtml: true,
-    }),
-  ],
   module: {
     rules: [
       {
@@ -42,6 +35,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.js$/i,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            exclude: [
+              /node_modules[\\\/]core-js/,
+              /node_modules[\\\/]webpack[\\\/]buildin/,
+            ],
+          },
+        },
+      },
+      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
         exclude: [/\.module\.css$/i, '/node_modules/'],
@@ -58,4 +63,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './webpack/templates/base_webpack.html',
+      filename: '../../core/templates/core/_base.html',
+      publicPath: '/static/bundles',
+      xhtml: true,
+    }),
+  ],
 }
