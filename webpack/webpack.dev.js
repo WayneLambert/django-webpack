@@ -30,14 +30,14 @@ module.exports = merge(common, {
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
-        type: 'asset',
+        type: 'asset/resource',
         parser: {
           dataUrlCondition: {
             maxSize: 10 * 1024,
           },
         },
         generator: {
-          filename: 'images/[name].[ext]',
+          filename: 'images/[name][ext]',
         },
       },
     ],

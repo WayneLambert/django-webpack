@@ -47,7 +47,7 @@ module.exports = merge(common, {
           },
         },
         generator: {
-          filename: 'images/[name].[contenthash:12].[ext]',
+          filename: 'images/[name].[contenthash:12][ext]',
         },
         use: [
           {

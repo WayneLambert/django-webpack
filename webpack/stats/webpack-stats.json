@@ -1,9 +1,9 @@
 {
   "status": "done",
   "assets": {
-    "images/header..jpg": {
-      "name": "images/header..jpg",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header..jpg"
+    "images/header.jpg": {
+      "name": "images/header.jpg",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header.jpg"
     },
     "js/index.js": {
       "name": "js/index.js",
