@@ -1,29 +1,27 @@
-const path = require('path')
 const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
+const BundleTracker = require('webpack-bundle-tracker')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const path = require('path')
+const glob = require('glob')
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 
-module.exports = merge(common, {
+const SRC = path.join(__dirname, '..')
+
+const production = {
+  name: 'Production Config',
   mode: 'production',
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, '../static/bundles'),
-    filename: 'js/[name].[contenthash].js',
-    clean: true,
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new cssMinimizerPlugin({
-        minimizerOptions: {
-          preset: ['default', { discardComments: { removeAll: true } }],
-        },
-      }),
-    ],
+    filename: 'js/[name].[contenthash:12].js',
   },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        exclude: /\.module\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
       {
         test: /\.css$/i,
         include: /\.module\.css$/i,
@@ -32,12 +30,16 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              module: {
+              modules: {
                 localIdentName: '[hash:base64]',
               },
             },
           },
         ],
+      },
+      {
+        test: /\.(scss)$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
@@ -69,7 +71,19 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: 'css/[name][contenthash].css',
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${SRC}/static/bundles/**/*`, { nodir: true }),
+    }),
+    new BundleTracker({
+      filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
     }),
   ],
-})
+}
+
+const mergedConfig = merge(common, production)
+module.exports = mergedConfig
+
+console.log(`The merged config for ${production.mode} is as follows:\n`)
+console.dir(mergedConfig, { depth: null, colors: true })

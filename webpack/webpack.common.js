@@ -1,11 +1,17 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const SRC = path.join(__dirname, '..')
 
 module.exports = {
   entry: {
-    index: './webpack/index.js',
-    vendor: './webpack/assets/scripts/vendor.js',
+    index: path.resolve(SRC, 'webpack/index.js'),
+    vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
+  },
+  output: {
+    path: path.resolve(SRC, 'static/bundles'),
+    publicPath: '/static/bundles',
+    clean: true,
   },
   resolve: {
     extensions: ['.ts', '...'],
@@ -14,7 +20,11 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        use: 'html-loader',
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
         exclude: '/node_modules/',
       },
       {
@@ -29,41 +39,20 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        exclude: [/\.module\.css$/i, '/node_modules/'],
-      },
-      {
-        test: /\.(scss)$/i,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: () => [require('autoprefixer')],
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-          },
-        ],
-      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './webpack/templates/base_webpack.html',
-      filename: '../../core/templates/core/_base.html',
-      publicPath: '/static/bundles',
+      template: path.resolve(SRC, 'webpack/templates/base_webpack.html'),
+      filename: path.resolve(SRC, 'webpack/core/templates/core/_base.html'),
       xhtml: true,
     }),
   ],
+  stats: {
+    errorDetails: false,
+    errorStack: false,
+    modules: false,
+    version: false,
+    warnings: false,
+  },
 }

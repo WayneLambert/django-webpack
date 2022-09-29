@@ -1,19 +1,21 @@
-const path = require('path')
 const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
-const BundleTracker = require('webpack-bundle-tracker')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-module.exports = merge(common, {
+const development = {
+  name: 'Development Config',
   mode: 'development',
   devtool: 'eval-source-map',
   output: {
-    path: path.resolve(__dirname, '../static/bundles'),
     filename: 'js/[name].js',
-    clean: true,
   },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        exclude: /\.module\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.css$/i,
         include: /\.module\.css$/i,
@@ -22,12 +24,16 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              module: {
+              modules: {
                 localIdentName: '[local]--[md4:hash:7]',
               },
             },
           },
         ],
+      },
+      {
+        test: /\.(scss)$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
@@ -47,8 +53,11 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new BundleTracker({
-      filename: './webpack/stats/webpack-stats.json',
-    }),
   ],
-})
+}
+
+const mergedConfig = merge(common, development)
+module.exports = mergedConfig
+
+console.log(`The merged config for ${development.mode} is as follows:\n`)
+console.dir(mergedConfig, { depth: null, colors: true })
