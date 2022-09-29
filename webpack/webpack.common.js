@@ -29,14 +29,9 @@ module.exports = {
       },
       {
         test: /\.(js|ts)$/i,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            exclude: [
-              /node_modules[\\\/]core-js/,
-              /node_modules[\\\/]webpack[\\\/]buildin/,
-            ],
-          },
         },
       },
     ],
@@ -44,15 +39,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(SRC, 'webpack/templates/base_webpack.html'),
-      filename: path.resolve(SRC, 'webpack/core/templates/core/_base.html'),
+      filename: path.resolve(SRC, 'core/templates/core/_base.html'),
       xhtml: true,
     }),
   ],
   stats: {
     errorDetails: false,
     errorStack: false,
-    modules: false,
-    version: false,
-    warnings: false,
+    modules: true,
+    warnings: true,
   },
 }

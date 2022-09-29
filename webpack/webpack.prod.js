@@ -74,7 +74,7 @@ const production = {
       filename: 'css/[name][contenthash].css',
     }),
     new PurgeCSSPlugin({
-      paths: glob.sync(`${SRC}/static/bundles/**/*`, { nodir: true }),
+      paths: glob.sync(`${SRC}/static/bundles/**/*.css`, { nodir: true }),
     }),
     new BundleTracker({
       filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
@@ -86,4 +86,4 @@ const mergedConfig = merge(common, production)
 module.exports = mergedConfig
 
 console.log(`The merged config for ${production.mode} is as follows:\n`)
-console.dir(mergedConfig, { depth: null, colors: true })
+console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')

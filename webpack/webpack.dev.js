@@ -60,4 +60,4 @@ const mergedConfig = merge(common, development)
 module.exports = mergedConfig
 
 console.log(`The merged config for ${development.mode} is as follows:\n`)
-console.dir(mergedConfig, { depth: null, colors: true })
+console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
