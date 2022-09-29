@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack Examples{% block title %}{% endblock title %}</title>
+    <title>Webpack Examples{% block title %}{% endblock title %}</title><%
+for (const tag of htmlWebpackPlugin.tags.headTags) { %>
+    <%= tag %><%
+} %>
   </head>
   <body>
     {% include 'components/header.html' %}
-    <img src="./webpack/assets/images/header.jpg" class="header-image" alt="Header" />
+    <img src="/static/bundles/images/header.jpg" class="header-image" alt="Header" />
     {% block content %}{% endblock content %}
   </body>
 </html>

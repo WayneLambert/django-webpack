@@ -1,11 +1,6 @@
 {
   "status": "done",
   "assets": {
-    "images/header.f837733ddcf5.jpg": {
-      "name": "images/header.f837733ddcf5.jpg",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header.f837733ddcf5.jpg",
-      "publicPath": "/static/bundlesimages/header.f837733ddcf5.jpg"
-    },
     "../../core/templates/core/_base.html": {
       "name": "../../core/templates/core/_base.html",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html",
@@ -16,30 +11,30 @@
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.9066aa7f88e0.js.LICENSE.txt",
       "publicPath": "/static/bundlesjs/vendor.9066aa7f88e0.js.LICENSE.txt"
     },
-    "css/index215bce91a2edee3b72ae.css": {
-      "name": "css/index215bce91a2edee3b72ae.css",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index215bce91a2edee3b72ae.css",
-      "publicPath": "/static/bundlescss/index215bce91a2edee3b72ae.css"
+    "css/index.f9a454e91cb2451fb5fe.css": {
+      "name": "css/index.f9a454e91cb2451fb5fe.css",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css",
+      "publicPath": "/static/bundlescss/index.f9a454e91cb2451fb5fe.css"
     },
-    "js/index.aeddad67822a.js": {
-      "name": "js/index.aeddad67822a.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.aeddad67822a.js",
-      "publicPath": "/static/bundlesjs/index.aeddad67822a.js"
+    "js/index.36fc305f53fc.js": {
+      "name": "js/index.36fc305f53fc.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.36fc305f53fc.js",
+      "publicPath": "/static/bundlesjs/index.36fc305f53fc.js"
     },
     "js/vendor.9066aa7f88e0.js": {
       "name": "js/vendor.9066aa7f88e0.js",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.9066aa7f88e0.js",
       "publicPath": "/static/bundlesjs/vendor.9066aa7f88e0.js"
     },
-    "css/index215bce91a2edee3b72ae.css.map": {
-      "name": "css/index215bce91a2edee3b72ae.css.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index215bce91a2edee3b72ae.css.map",
-      "publicPath": "/static/bundlescss/index215bce91a2edee3b72ae.css.map"
+    "css/index.f9a454e91cb2451fb5fe.css.map": {
+      "name": "css/index.f9a454e91cb2451fb5fe.css.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css.map",
+      "publicPath": "/static/bundlescss/index.f9a454e91cb2451fb5fe.css.map"
     },
-    "js/index.aeddad67822a.js.map": {
-      "name": "js/index.aeddad67822a.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.aeddad67822a.js.map",
-      "publicPath": "/static/bundlesjs/index.aeddad67822a.js.map"
+    "js/index.36fc305f53fc.js.map": {
+      "name": "js/index.36fc305f53fc.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.36fc305f53fc.js.map",
+      "publicPath": "/static/bundlesjs/index.36fc305f53fc.js.map"
     },
     "js/vendor.9066aa7f88e0.js.map": {
       "name": "js/vendor.9066aa7f88e0.js.map",
@@ -49,8 +44,8 @@
   },
   "chunks": {
     "index": [
-      "css/index215bce91a2edee3b72ae.css",
-      "js/index.aeddad67822a.js"
+      "css/index.f9a454e91cb2451fb5fe.css",
+      "js/index.36fc305f53fc.js"
     ],
     "vendor": [
       "js/vendor.9066aa7f88e0.js"

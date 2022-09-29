@@ -11,7 +11,7 @@
         "forceConsistentCasingInFileNames": true
     },
     "include": [
-        "./webpack/assets/scripts/*"
+        "./assets/scripts/*"
     ],
     "exclude": [
         "node_modules",

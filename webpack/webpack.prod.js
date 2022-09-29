@@ -15,6 +15,24 @@ const production = {
   output: {
     filename: 'js/[name].[contenthash:12].js',
   },
+  //   optimization: {
+  //     splitChunks: {
+  //       chunks: 'all',
+  //       maxSize: Infinity,
+  //       minSize: 0,
+  //       cacheGroups: {
+  //         node_modules: {
+  //           test: /[\\/]node_modules[\\/]/,
+  //           name(module) {
+  //             const packageName = module.context.match(
+  //               /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+  //             )[1]
+  //             return packageName
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
   module: {
     rules: [
       {
@@ -71,7 +89,7 @@ const production = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name][contenthash].css',
+      filename: 'css/[name].[contenthash].css',
     }),
     new PurgeCSSPlugin({
       paths: glob.sync(`${SRC}/static/bundles/**/*.css`, { nodir: true }),

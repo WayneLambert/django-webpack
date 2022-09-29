@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const SRC = path.join(__dirname, '..')
 
@@ -20,11 +21,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
+        use: 'html-loader',
         exclude: '/node_modules/',
       },
       {
@@ -38,9 +35,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/base_webpack.html'),
+      template: path.resolve(SRC, 'webpack/templates/base_webpack.ejs'),
       filename: path.resolve(SRC, 'core/templates/core/_base.html'),
+      inject: false,
+      minify: { collapseWhitespace: false },
+      publicPath: '/static/bundles',
       xhtml: true,
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(SRC, 'webpack/assets/images'),
+          to: path.resolve(SRC, 'static/bundles/images'),
+        },
+      ],
     }),
   ],
   stats: {

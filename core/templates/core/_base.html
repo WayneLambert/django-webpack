@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Webpack Examples{% block title %}{% endblock title %}</title>
-  <script defer="defer" src="/static/bundles/js/index.js"></script><script defer="defer" src="/static/bundles/js/vendor.js"></script><link href="/static/bundles/css/index.css" rel="stylesheet"/></head>
+    <script defer="defer" src="/static/bundles/js/index.js"></script>
+    <script defer="defer" src="/static/bundles/js/vendor.js"></script>
+    <link href="/static/bundles/css/index.css" rel="stylesheet">
+  </head>
   <body>
     {% include 'components/header.html' %}
-    <img src="/static/bundles/images/header.jpg" class="header-image" alt="Header" />
+    <img src="/static/bundles/images/header.jpg" class="header-image" alt="Header">
     {% block content %}{% endblock content %}
   </body>
 </html>

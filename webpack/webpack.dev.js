@@ -37,7 +37,8 @@ const development = {
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
-        type: 'asset/resource',
+        use: ['file-loader', 'image-webpack-loader'],
+        type: 'asset',
         parser: {
           dataUrlCondition: {
             maxSize: 10 * 1024,
