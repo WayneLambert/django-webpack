@@ -1,20 +1,25 @@
 {
     "compilerOptions": {
-        "module": "es6",
-        "target": "es5",
-        "outDir": "static/bundles/js",
-        "noImplicitAny": true,
-        "noUnusedParameters": true,
         "allowJs": true,
-        "moduleResolution": "node",
+        "noEmit": true,
+        "module": "es2015",
+        "target": "es2015",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
         "strict": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedParameters": true
     },
     "include": [
-        "./assets/scripts/*"
+        "**/*"
     ],
     "exclude": [
+        "static",
         "node_modules",
-        "static"
-    ]
+    ],
+    "typeAcquisition": {
+        "enable": true
+    }
 }

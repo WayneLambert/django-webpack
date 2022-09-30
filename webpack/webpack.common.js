@@ -7,7 +7,7 @@ const SRC = path.join(__dirname, '..')
 
 module.exports = {
   entry: {
-    index: path.resolve(SRC, 'webpack/index.js'),
+    index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
   },
   output: {

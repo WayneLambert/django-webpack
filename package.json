@@ -2,7 +2,7 @@
     "name": "src",
     "version": "1.0.0",
     "description": "Webpack Example Application",
-    "main": "index.js",
+    "main": "webpack/index.ts",
     "scripts": {
         "dev": "cross-env BABEL_ENV=dev webpack --watch --config webpack/webpack.dev.js",
         "build": "cross-env BABEL_ENV=prod webpack --config webpack/webpack.prod.js",
