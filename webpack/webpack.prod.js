@@ -15,24 +15,6 @@ const production = {
   output: {
     filename: 'js/[name].[contenthash:12].js',
   },
-  //   optimization: {
-  //     splitChunks: {
-  //       chunks: 'all',
-  //       maxSize: Infinity,
-  //       minSize: 0,
-  //       cacheGroups: {
-  //         node_modules: {
-  //           test: /[\\/]node_modules[\\/]/,
-  //           name(module) {
-  //             const packageName = module.context.match(
-  //               /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-  //             )[1]
-  //             return packageName
-  //           },
-  //         },
-  //       },
-  //     },
-  //   },
   module: {
     rules: [
       {
@@ -103,5 +85,5 @@ const production = {
 const mergedConfig = merge(common, production)
 module.exports = mergedConfig
 
-console.log(`The merged config for ${production.mode} is as follows:\n`)
+console.log(`The merged config for ${production.mode} mode is as follows:\n`)
 console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')

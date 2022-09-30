@@ -1,55 +1,55 @@
 {
   "status": "done",
   "assets": {
+    "images/header.jpg": {
+      "name": "images/header.jpg",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header.jpg",
+      "publicPath": "/static/bundles/images/header.jpg"
+    },
     "../../core/templates/core/_base.html": {
       "name": "../../core/templates/core/_base.html",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html",
-      "publicPath": "/static/bundles../../core/templates/core/_base.html"
-    },
-    "js/vendor.9066aa7f88e0.js.LICENSE.txt": {
-      "name": "js/vendor.9066aa7f88e0.js.LICENSE.txt",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.9066aa7f88e0.js.LICENSE.txt",
-      "publicPath": "/static/bundlesjs/vendor.9066aa7f88e0.js.LICENSE.txt"
+      "publicPath": "/static/bundles/../../core/templates/core/_base.html"
     },
     "css/index.f9a454e91cb2451fb5fe.css": {
       "name": "css/index.f9a454e91cb2451fb5fe.css",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css",
-      "publicPath": "/static/bundlescss/index.f9a454e91cb2451fb5fe.css"
+      "publicPath": "/static/bundles/css/index.f9a454e91cb2451fb5fe.css"
     },
-    "js/index.36fc305f53fc.js": {
-      "name": "js/index.36fc305f53fc.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.36fc305f53fc.js",
-      "publicPath": "/static/bundlesjs/index.36fc305f53fc.js"
+    "js/index.8c819e1c4e6e.js": {
+      "name": "js/index.8c819e1c4e6e.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.8c819e1c4e6e.js",
+      "publicPath": "/static/bundles/js/index.8c819e1c4e6e.js"
     },
-    "js/vendor.9066aa7f88e0.js": {
-      "name": "js/vendor.9066aa7f88e0.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.9066aa7f88e0.js",
-      "publicPath": "/static/bundlesjs/vendor.9066aa7f88e0.js"
+    "js/vendor.79c322a3513f.js": {
+      "name": "js/vendor.79c322a3513f.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.79c322a3513f.js",
+      "publicPath": "/static/bundles/js/vendor.79c322a3513f.js"
     },
     "css/index.f9a454e91cb2451fb5fe.css.map": {
       "name": "css/index.f9a454e91cb2451fb5fe.css.map",
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css.map",
-      "publicPath": "/static/bundlescss/index.f9a454e91cb2451fb5fe.css.map"
+      "publicPath": "/static/bundles/css/index.f9a454e91cb2451fb5fe.css.map"
     },
-    "js/index.36fc305f53fc.js.map": {
-      "name": "js/index.36fc305f53fc.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.36fc305f53fc.js.map",
-      "publicPath": "/static/bundlesjs/index.36fc305f53fc.js.map"
+    "js/index.8c819e1c4e6e.js.map": {
+      "name": "js/index.8c819e1c4e6e.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.8c819e1c4e6e.js.map",
+      "publicPath": "/static/bundles/js/index.8c819e1c4e6e.js.map"
     },
-    "js/vendor.9066aa7f88e0.js.map": {
-      "name": "js/vendor.9066aa7f88e0.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.9066aa7f88e0.js.map",
-      "publicPath": "/static/bundlesjs/vendor.9066aa7f88e0.js.map"
+    "js/vendor.79c322a3513f.js.map": {
+      "name": "js/vendor.79c322a3513f.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.79c322a3513f.js.map",
+      "publicPath": "/static/bundles/js/vendor.79c322a3513f.js.map"
     }
   },
   "chunks": {
     "index": [
       "css/index.f9a454e91cb2451fb5fe.css",
-      "js/index.36fc305f53fc.js"
+      "js/index.8c819e1c4e6e.js"
     ],
     "vendor": [
-      "js/vendor.9066aa7f88e0.js"
+      "js/vendor.79c322a3513f.js"
     ]
   },
-  "publicPath": "/static/bundles"
+  "publicPath": "/static/bundles/"
 }

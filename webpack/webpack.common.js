@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const SRC = path.join(__dirname, '..')
 
@@ -11,11 +12,18 @@ module.exports = {
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
-    publicPath: '/static/bundles',
+    publicPath: '/static/bundles/',
     clean: true,
   },
   resolve: {
     extensions: ['.ts', '...'],
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+    ],
   },
   module: {
     rules: [
@@ -39,7 +47,6 @@ module.exports = {
       filename: path.resolve(SRC, 'core/templates/core/_base.html'),
       inject: false,
       minify: { collapseWhitespace: false },
-      publicPath: '/static/bundles',
       xhtml: true,
     }),
     new CopyPlugin({
