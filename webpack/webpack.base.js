@@ -39,10 +39,6 @@ module.exports = {
           name: 'alpinejs',
           test: /[\\/]node_modules[\\/]alpinejs[\\/]/,
         },
-        flatpickr: {
-          name: 'flatpickr',
-          test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
-        },
         lodash: {
           name: 'lodash-es',
           test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
@@ -76,7 +72,10 @@ module.exports = {
       template: path.resolve(SRC, 'webpack/templates/base_webpack.ejs'),
       filename: path.resolve(SRC, 'core/templates/core/_base.html'),
       inject: false,
-      minify: { collapseWhitespace: false },
+      minify: {
+        collapseWhitespace: false,
+        keepClosingSlash: true,
+      },
       xhtml: true,
     }),
     new CopyPlugin({
