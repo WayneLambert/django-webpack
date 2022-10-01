@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const SRC = path.join(__dirname, '..')
+const SRC = path.resolve(__dirname, '..')
 
 module.exports = {
   entry: {
@@ -19,6 +19,36 @@ module.exports = {
     extensions: ['.ts', '...'],
   },
   optimization: {
+    moduleIds: 'named',
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      maxSize: Infinity,
+      cacheGroups: {
+        corejs: {
+          name: 'core-js',
+          test: /[\\/]node_modules[\\/]core-js[\\/]/,
+        },
+        htmx: {
+          name: 'htmx',
+          test: /[\\/]node_modules[\\/]htmx.org[\\/]/,
+        },
+        alpinejs: {
+          name: 'alpinejs',
+          test: /[\\/]node_modules[\\/]alpinejs[\\/]/,
+        },
+        flatpickr: {
+          name: 'flatpickr',
+          test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
+        },
+        lodash: {
+          name: 'lodash-es',
+          test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
+        },
+      },
+    },
     minimizer: [
       new TerserPlugin({
         extractComments: false,

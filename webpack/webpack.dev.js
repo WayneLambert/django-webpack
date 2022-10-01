@@ -1,4 +1,4 @@
-const common = require('./webpack.common')
+const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -57,7 +57,7 @@ const development = {
   ],
 }
 
-const mergedConfig = merge(common, development)
+const mergedConfig = merge(base, development)
 module.exports = mergedConfig
 
 console.log(`The merged config for ${development.mode} mode is as follows:\n`)

@@ -11,44 +11,124 @@
       "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html",
       "publicPath": "/static/bundles/../../core/templates/core/_base.html"
     },
-    "css/index.f9a454e91cb2451fb5fe.css": {
-      "name": "css/index.f9a454e91cb2451fb5fe.css",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css",
-      "publicPath": "/static/bundles/css/index.f9a454e91cb2451fb5fe.css"
+    "css/index.4b4400a49fc98eb0db8d.css": {
+      "name": "css/index.4b4400a49fc98eb0db8d.css",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.4b4400a49fc98eb0db8d.css",
+      "publicPath": "/static/bundles/css/index.4b4400a49fc98eb0db8d.css"
     },
-    "js/index.8c819e1c4e6e.js": {
-      "name": "js/index.8c819e1c4e6e.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.8c819e1c4e6e.js",
-      "publicPath": "/static/bundles/js/index.8c819e1c4e6e.js"
+    "js/index.54bf8d9beb92.js": {
+      "name": "js/index.54bf8d9beb92.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.54bf8d9beb92.js",
+      "publicPath": "/static/bundles/js/index.54bf8d9beb92.js"
     },
-    "js/vendor.79c322a3513f.js": {
-      "name": "js/vendor.79c322a3513f.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.79c322a3513f.js",
-      "publicPath": "/static/bundles/js/vendor.79c322a3513f.js"
+    "js/vendor.fb6c38d9a654.js": {
+      "name": "js/vendor.fb6c38d9a654.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.fb6c38d9a654.js",
+      "publicPath": "/static/bundles/js/vendor.fb6c38d9a654.js"
     },
-    "css/index.f9a454e91cb2451fb5fe.css.map": {
-      "name": "css/index.f9a454e91cb2451fb5fe.css.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.f9a454e91cb2451fb5fe.css.map",
-      "publicPath": "/static/bundles/css/index.f9a454e91cb2451fb5fe.css.map"
+    "js/runtime.2b843aaaafa3.js": {
+      "name": "js/runtime.2b843aaaafa3.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/runtime.2b843aaaafa3.js",
+      "publicPath": "/static/bundles/js/runtime.2b843aaaafa3.js"
     },
-    "js/index.8c819e1c4e6e.js.map": {
-      "name": "js/index.8c819e1c4e6e.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.8c819e1c4e6e.js.map",
-      "publicPath": "/static/bundles/js/index.8c819e1c4e6e.js.map"
+    "css/flatpickr.b66017e97921946dadb3.css": {
+      "name": "css/flatpickr.b66017e97921946dadb3.css",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/flatpickr.b66017e97921946dadb3.css",
+      "publicPath": "/static/bundles/css/flatpickr.b66017e97921946dadb3.css"
     },
-    "js/vendor.79c322a3513f.js.map": {
-      "name": "js/vendor.79c322a3513f.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.79c322a3513f.js.map",
-      "publicPath": "/static/bundles/js/vendor.79c322a3513f.js.map"
+    "js/flatpickr.5104d93e07da.js": {
+      "name": "js/flatpickr.5104d93e07da.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/flatpickr.5104d93e07da.js",
+      "publicPath": "/static/bundles/js/flatpickr.5104d93e07da.js"
+    },
+    "js/core-js.ed46701a4b2c.js": {
+      "name": "js/core-js.ed46701a4b2c.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/core-js.ed46701a4b2c.js",
+      "publicPath": "/static/bundles/js/core-js.ed46701a4b2c.js"
+    },
+    "js/lodash-es.fab2a968ef2b.js": {
+      "name": "js/lodash-es.fab2a968ef2b.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/lodash-es.fab2a968ef2b.js",
+      "publicPath": "/static/bundles/js/lodash-es.fab2a968ef2b.js"
+    },
+    "js/htmx.a7f33f837413.js": {
+      "name": "js/htmx.a7f33f837413.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/htmx.a7f33f837413.js",
+      "publicPath": "/static/bundles/js/htmx.a7f33f837413.js"
+    },
+    "js/alpinejs.bb6e519cc640.js": {
+      "name": "js/alpinejs.bb6e519cc640.js",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/alpinejs.bb6e519cc640.js",
+      "publicPath": "/static/bundles/js/alpinejs.bb6e519cc640.js"
+    },
+    "css/index.4b4400a49fc98eb0db8d.css.map": {
+      "name": "css/index.4b4400a49fc98eb0db8d.css.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.4b4400a49fc98eb0db8d.css.map",
+      "publicPath": "/static/bundles/css/index.4b4400a49fc98eb0db8d.css.map"
+    },
+    "js/index.54bf8d9beb92.js.map": {
+      "name": "js/index.54bf8d9beb92.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.54bf8d9beb92.js.map",
+      "publicPath": "/static/bundles/js/index.54bf8d9beb92.js.map"
+    },
+    "js/vendor.fb6c38d9a654.js.map": {
+      "name": "js/vendor.fb6c38d9a654.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.fb6c38d9a654.js.map",
+      "publicPath": "/static/bundles/js/vendor.fb6c38d9a654.js.map"
+    },
+    "js/runtime.2b843aaaafa3.js.map": {
+      "name": "js/runtime.2b843aaaafa3.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/runtime.2b843aaaafa3.js.map",
+      "publicPath": "/static/bundles/js/runtime.2b843aaaafa3.js.map"
+    },
+    "css/flatpickr.b66017e97921946dadb3.css.map": {
+      "name": "css/flatpickr.b66017e97921946dadb3.css.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/flatpickr.b66017e97921946dadb3.css.map",
+      "publicPath": "/static/bundles/css/flatpickr.b66017e97921946dadb3.css.map"
+    },
+    "js/flatpickr.5104d93e07da.js.map": {
+      "name": "js/flatpickr.5104d93e07da.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/flatpickr.5104d93e07da.js.map",
+      "publicPath": "/static/bundles/js/flatpickr.5104d93e07da.js.map"
+    },
+    "js/core-js.ed46701a4b2c.js.map": {
+      "name": "js/core-js.ed46701a4b2c.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/core-js.ed46701a4b2c.js.map",
+      "publicPath": "/static/bundles/js/core-js.ed46701a4b2c.js.map"
+    },
+    "js/lodash-es.fab2a968ef2b.js.map": {
+      "name": "js/lodash-es.fab2a968ef2b.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/lodash-es.fab2a968ef2b.js.map",
+      "publicPath": "/static/bundles/js/lodash-es.fab2a968ef2b.js.map"
+    },
+    "js/htmx.a7f33f837413.js.map": {
+      "name": "js/htmx.a7f33f837413.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/htmx.a7f33f837413.js.map",
+      "publicPath": "/static/bundles/js/htmx.a7f33f837413.js.map"
+    },
+    "js/alpinejs.bb6e519cc640.js.map": {
+      "name": "js/alpinejs.bb6e519cc640.js.map",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/alpinejs.bb6e519cc640.js.map",
+      "publicPath": "/static/bundles/js/alpinejs.bb6e519cc640.js.map"
     }
   },
   "chunks": {
     "index": [
-      "css/index.f9a454e91cb2451fb5fe.css",
-      "js/index.8c819e1c4e6e.js"
+      "js/runtime.2b843aaaafa3.js",
+      "css/flatpickr.b66017e97921946dadb3.css",
+      "js/flatpickr.5104d93e07da.js",
+      "js/core-js.ed46701a4b2c.js",
+      "js/lodash-es.fab2a968ef2b.js",
+      "css/index.4b4400a49fc98eb0db8d.css",
+      "js/index.54bf8d9beb92.js"
     ],
     "vendor": [
-      "js/vendor.79c322a3513f.js"
+      "js/runtime.2b843aaaafa3.js",
+      "css/flatpickr.b66017e97921946dadb3.css",
+      "js/flatpickr.5104d93e07da.js",
+      "js/htmx.a7f33f837413.js",
+      "js/alpinejs.bb6e519cc640.js",
+      "js/vendor.fb6c38d9a654.js"
     ]
   },
   "publicPath": "/static/bundles/"

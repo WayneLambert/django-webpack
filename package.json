@@ -5,7 +5,7 @@
     "main": "webpack/index.ts",
     "scripts": {
         "dev": "cross-env BABEL_ENV=dev webpack --watch --config webpack/webpack.dev.js",
-        "build": "cross-env BABEL_ENV=prod webpack --config webpack/webpack.prod.js",
+        "build": "cross-env BABEL_ENV=prod webpack --progress --config webpack/webpack.prod.js",
         "bundle-analyzer": "cross-env BABEL_ENV=prod webpack --config webpack/webpack.analyze.js",
         "typecheck": "tsc --noEmit"
     },

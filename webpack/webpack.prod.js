@@ -1,4 +1,4 @@
-const common = require('./webpack.common')
+const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const BundleTracker = require('webpack-bundle-tracker')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -73,16 +73,13 @@ const production = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
-    new PurgeCSSPlugin({
-      paths: glob.sync(`${SRC}/static/bundles/**/*.css`, { nodir: true }),
-    }),
     new BundleTracker({
       filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
     }),
   ],
 }
 
-const mergedConfig = merge(common, production)
+const mergedConfig = merge(base, production)
 module.exports = mergedConfig
 
 console.log(`The merged config for ${production.mode} mode is as follows:\n`)
