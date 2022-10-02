@@ -93,7 +93,7 @@ module.exports = {
     }),
     new WebpackShellPluginNext({
       onAfterDone: {
-        scripts: ['python ./webpack/split_head_tags.py'],
+        scripts: ['python ./webpack/management/split_head_tags.py'],
         blocking: true,
         parallel: false,
       },
