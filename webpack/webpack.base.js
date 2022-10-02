@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 
 const SRC = path.resolve(__dirname, '..')
 
@@ -89,6 +90,13 @@ module.exports = {
           to: path.resolve(SRC, 'static/bundles/images'),
         },
       ],
+    }),
+    new WebpackShellPluginNext({
+      onAfterDone: {
+        scripts: ['python ./webpack/split_head_tags.py'],
+        blocking: true,
+        parallel: false,
+      },
     }),
   ],
   stats: {
