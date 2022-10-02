@@ -1,7 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackSkipAssetsPlugin =
-  require('html-webpack-skip-assets-plugin').HtmlWebpackSkipAssetsPlugin
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
@@ -83,9 +81,6 @@ module.exports = {
         keepClosingSlash: true,
       },
       xhtml: true,
-    }),
-    new HtmlWebpackSkipAssetsPlugin({
-      excludeAssets: ['**/flatpickr.**.css', '**/flatpickr.**.js'],
     }),
     new CopyPlugin({
       patterns: [
