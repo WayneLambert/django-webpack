@@ -5,16 +5,16 @@
 {% block content %}
   <div class="container p-2 mx-auto">
     <div class="mt-2">
-      <h5>Area of Circle Button</h5>
       <div class="form-group row">
         <label class="col-2 col-form-label">Radius of Circle:</label>
         <div class="col-1">
           <input type="text" id="radius-of-circle" class="form-control form-control-hover-light form-select-hover-light" />
         </div>
+        <div class="col-9">
+          <button class="btn btn-secondary btn-block" id="btn-area-of-circle">Calculate Circle Area</button>
+        </div>
       </div>
-      <div>Click below button to calculate area of circle</div>
-      <button class="btn btn-secondary mt-2" id="btn-area-of-circle">Calculate</button>
-      <div id="area-of-circle"></div>
+      <div id="area-of-circle" class="pt-3"></div>
     </div>
   </div>
 {% endblock content %}
