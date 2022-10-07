@@ -10,6 +10,7 @@ module.exports = {
     index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
     flatpickr: path.resolve(SRC, 'webpack/assets/vendor/flatpickr.js'),
+    circle: path.resolve(SRC, 'webpack/assets/scripts/circle.ts'),
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),

@@ -2,19 +2,25 @@
 
 {% block title %}{{ block.super }} | Area of a Circle {% endblock title %}
 
+{% block additional_js %}
+  <script defer="defer" src="/static/bundles/js/circle.js"></script>
+{% endblock additional_js %}
+
 {% block content %}
   <div class="container p-2 mx-auto">
     <div class="mt-2">
       <div class="form-group row">
-        <label class="col-2 col-form-label">Radius of Circle:</label>
+        <label class="col-2 col-form-label"><span class="float-end fw-bold">Radius:</span></label>
         <div class="col-1">
-          <input type="text" id="radius-of-circle" class="form-control form-control-hover-light form-select-hover-light" />
+          <input type="text" id="radius-of-circle" class="form-control" />
         </div>
         <div class="col-9">
-          <button class="btn btn-secondary btn-block" id="btn-area-of-circle">Calculate Circle Area</button>
+          <button class="btn btn-secondary" id="btn-area-of-circle">Calculate Circle Area</button>
         </div>
       </div>
-      <div id="area-of-circle" class="pt-3"></div>
+      <div class="row">
+        <div id="area-of-circle" class="pt-3"></div>
+      </div>
     </div>
   </div>
 {% endblock content %}
