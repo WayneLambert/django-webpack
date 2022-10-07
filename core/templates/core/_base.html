@@ -1,21 +1,24 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta content="IE=edge"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpack Examples{% block title %}{% endblock title %}</title>
-    <script defer="defer" src="/static/bundles/js/runtime.2b843aaaafa3.js"></script>
-    <script defer="defer" src="/static/bundles/js/flatpickr.5104d93e07da.js"></script>
-    <script defer="defer" src="/static/bundles/js/core-js.ed46701a4b2c.js"></script>
-    <script defer="defer" src="/static/bundles/js/lodash-es.fab2a968ef2b.js"></script>
-    <script defer="defer" src="/static/bundles/js/index.54bf8d9beb92.js"></script>
-    <script defer="defer" src="/static/bundles/js/htmx.a7f33f837413.js"></script>
-    <script defer="defer" src="/static/bundles/js/alpinejs.bb6e519cc640.js"></script>
-    <script defer="defer" src="/static/bundles/js/vendor.fb6c38d9a654.js"></script>
-    <link href="/static/bundles/css/flatpickr.b66017e97921946dadb3.css" rel="stylesheet"/>
-    <link href="/static/bundles/css/index.4b4400a49fc98eb0db8d.css" rel="stylesheet"/>
-    {% block additional_head %}{% endblock additional_head %}
+    {% comment %} {% include 'head_tags/temp.txt' %} {% endcomment %}
+
+    {% include 'head_tags/js/runtime.txt' %}
+    {% include 'head_tags/js/lodash_es.txt' %}
+    {% include 'head_tags/js/index.txt' %}
+    {% include 'head_tags/js/htmx.txt' %}
+    {% include 'head_tags/js/alpinejs.txt' %}
+    {% include 'head_tags/js/vendor.txt' %}
+    {% block additional_js %}{% endblock additional_js %}
+
+    {% include 'head_tags/css/index.txt' %}
+    {% block additional_css %}{% endblock additional_css %}
   </head>
   <body>
     {% include 'components/header.html' %}

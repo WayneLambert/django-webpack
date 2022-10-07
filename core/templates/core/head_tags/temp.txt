@@ -1,0 +1,11 @@
+<script defer="defer" src="/static/bundles/js/runtime.js"></script>
+<script defer="defer" src="/static/bundles/js/lodash-es.js"></script>
+<script defer="defer" src="/static/bundles/js/index.js"></script>
+<script defer="defer" src="/static/bundles/js/htmx.js"></script>
+<script defer="defer" src="/static/bundles/js/alpinejs.js"></script>
+<script defer="defer" src="/static/bundles/js/vendors-node_modules_flatpickr_dist_flatpickr_min_js.js"></script>
+<script defer="defer" src="/static/bundles/js/webpack_assets_vendor_flatpickr_js.js"></script>
+<script defer="defer" src="/static/bundles/js/vendor.js"></script>
+<script defer="defer" src="/static/bundles/js/flatpickr.js"></script>
+<link href="/static/bundles/css/vendors-node_modules_flatpickr_dist_themes_light_css.css" rel="stylesheet"/>
+<link href="/static/bundles/css/index.css" rel="stylesheet"/>

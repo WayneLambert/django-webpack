@@ -6,10 +6,10 @@
       "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header.jpg",
       "publicPath": "/static/bundles/images/header.jpg"
     },
-    "../../core/templates/core/_base.html": {
-      "name": "../../core/templates/core/_base.html",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/_base.html",
-      "publicPath": "/static/bundles/../../core/templates/core/_base.html"
+    "../../core/templates/core/head_tags/temp.txt": {
+      "name": "../../core/templates/core/head_tags/temp.txt",
+      "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/head_tags/temp.txt",
+      "publicPath": "/static/bundles/../../core/templates/core/head_tags/temp.txt"
     },
     "css/index.4b4400a49fc98eb0db8d.css": {
       "name": "css/index.4b4400a49fc98eb0db8d.css",

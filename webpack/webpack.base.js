@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
+    flatpickr: path.resolve(SRC, 'webpack/assets/vendor/flatpickr.js'),
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
@@ -28,10 +29,6 @@ module.exports = {
       minSize: 0,
       maxSize: Infinity,
       cacheGroups: {
-        corejs: {
-          name: 'core-js',
-          test: /[\\/]node_modules[\\/]core-js[\\/]/,
-        },
         htmx: {
           name: 'htmx',
           test: /[\\/]node_modules[\\/]htmx.org[\\/]/,
@@ -43,10 +40,6 @@ module.exports = {
         lodash: {
           name: 'lodash-es',
           test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
-        },
-        flatpickr: {
-          name: 'flatpickr',
-          test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
         },
       },
     },
@@ -75,7 +68,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(SRC, 'webpack/templates/base_webpack.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/_base.html'),
+      filename: path.resolve(SRC, 'core/templates/core/head_tags/temp.txt'),
       inject: false,
       minify: {
         collapseWhitespace: false,
