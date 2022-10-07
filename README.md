@@ -1,6 +1,6 @@
-# Webpack Example
+# Django Webpack Example
 
-This repository contains examples of Webpack configuration.
+This repository contains examples of Webpack configuration with Django.
 
 It is also used to run experiments with Webpack.
 
@@ -8,4 +8,4 @@ It is also used to run experiments with Webpack.
 
 Ensure everything is installed with `npm install`
 
-Bring up the Webpack development server with `npm start`
+Bring up the Webpack development server with `npm run dev`
