@@ -8,7 +8,8 @@
 for (const tag of htmlWebpackPlugin.tags.headTags) { %>
     <%= tag %><%
 } %>
-    {% block additional_head %}{% endblock additional_head %}
+    {% block additional_js %}{% endblock additional_js %}
+    {% block additional_css %}{% endblock additional_css %}
   </head>
   <body>
     {% include 'components/header.html' %}

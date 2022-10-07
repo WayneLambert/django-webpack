@@ -2,20 +2,30 @@
 
 {% block title %}{{ block.super }} | Flatpickr{% endblock title %}
 
+{% block additional_js %}
+  <script defer="defer" src="/static/bundles/js/vendors-node_modules_flatpickr_dist_flatpickr_min_js.js"></script>
+  <script defer="defer" src="/static/bundles/js/webpack_assets_vendor_flatpickr_js.js"></script>
+  <script defer="defer" src="/static/bundles/js/flatpickr.js"></script>
+{% endblock additional_js %}
+
+{% block additional_css %}
+  <link href="/static/bundles/css/vendors-node_modules_flatpickr_dist_themes_light_css.css" rel="stylesheet"/>
+{% endblock additional_css %}
+
 {% block content %}
   <div class="container p-2 mx-auto">
     <!-- Flatpickr Test Element -->
     <div class="pt-3">
       <h5>Flatpickr Test Element</h5>
       <div class="col-sm-2">
-        <div id="div_id_business_update_form-registration_date" class="mb-3">
-          <label for="id_business_update_form-registration_date" class="form-label requiredField">
+        <div id="div_id_form-reg_date" class="mb-3">
+          <label for="id_form-reg_date" class="form-label requiredField">
               Registration Date<span class="asteriskField">*</span>
           </label>
             <input
-              type="text" name="business_update_form-registration_date" value="2017-11-15"
+              type="text" name="form-reg_date" value="2017-11-15"
               class="js-flatpickr form-control form-control-hover-light form-select-hover-light sitedateinput"
-              tag="fp-date" placeholder="Select Date..." required="" id="id_business_update_form-registration_date"
+              tag="fp-date" placeholder="Select Date..." required="" id="id_form-reg_date"
             />
         </div>
       </div>
