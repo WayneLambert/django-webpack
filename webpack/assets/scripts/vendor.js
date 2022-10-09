@@ -1,11 +1,8 @@
+// Import Alpine object from alpinejs library
 import Alpine from 'alpinejs'
 
-// Adds Alpine object to the window scope
-window.Alpine = Alpine
+// Adds Alpine object to the window scope and initialise Alpine
+window.Alpine = Alpine.start()
 
-// Initialises Alpine
-Alpine.start()
-
-// Flatpickr
-import flatpickr from 'flatpickr/dist/flatpickr.min'
-import '../vendor/flatpickr.js'
+// Import HTMX and add it to the window scope
+window.htmx = require('htmx.org')

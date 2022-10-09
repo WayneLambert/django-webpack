@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 
 const SRC = path.resolve(__dirname, '..')
 
@@ -9,7 +10,6 @@ module.exports = {
   entry: {
     index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
-    flatpickr: path.resolve(SRC, 'webpack/assets/vendor/flatpickr.js'),
     circle: path.resolve(SRC, 'webpack/assets/scripts/circle.ts'),
   },
   output: {
@@ -71,8 +71,24 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/base_webpack.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/_base.html'),
+      template: path.resolve(SRC, 'webpack/templates/scripts.ejs'),
+      filename: path.resolve(
+        SRC,
+        'core/templates/core/head_tags/scripts/scripts.txt'
+      ),
+      inject: false,
+      minify: {
+        collapseWhitespace: false,
+        keepClosingSlash: true,
+      },
+      xhtml: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(SRC, 'webpack/templates/styles.ejs'),
+      filename: path.resolve(
+        SRC,
+        'core/templates/core/head_tags/styles/styles.txt'
+      ),
       inject: false,
       minify: {
         collapseWhitespace: false,
@@ -87,6 +103,13 @@ module.exports = {
           to: path.resolve(SRC, 'static/bundles/images'),
         },
       ],
+    }),
+    new WebpackShellPluginNext({
+      onAfterDone: {
+        scripts: ['python ./webpack/management/create_head_tags.py'],
+        blocking: true,
+        parallel: false,
+      },
     }),
   ],
   stats: {

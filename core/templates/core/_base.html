@@ -4,21 +4,17 @@
     <meta charset="UTF-8"/>
     <meta content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Webpack Examples{% block title %}{% endblock title %}</title>
-    <script defer="defer" src="/static/bundles/js/runtime.js"></script>
-    <script defer="defer" src="/static/bundles/js/lodash-es.js"></script>
-    <script defer="defer" src="/static/bundles/js/webpack_assets_scripts_circle_ts.js"></script>
-    <script defer="defer" src="/static/bundles/js/index.js"></script>
-    <script defer="defer" src="/static/bundles/js/htmx.js"></script>
-    <script defer="defer" src="/static/bundles/js/alpinejs.js"></script>
-    <script defer="defer" src="/static/bundles/js/vendors-node_modules_flatpickr_dist_flatpickr_min_js.js"></script>
-    <script defer="defer" src="/static/bundles/js/webpack_assets_vendor_flatpickr_js.js"></script>
-    <script defer="defer" src="/static/bundles/js/vendor.js"></script>
-    <script defer="defer" src="/static/bundles/js/flatpickr.js"></script>
-    <link href="/static/bundles/css/vendors-node_modules_flatpickr_dist_themes_light_css.css" rel="stylesheet"/>
-    <link href="/static/bundles/css/index.css" rel="stylesheet"/>
-    {% block additional_js %}{% endblock additional_js %}
-    {% block additional_css %}{% endblock additional_css %}
+    <title>Django Webpack{% block title %}{% endblock title %}</title>
+    <!-- Base JS -->
+    <script defer="defer" src="{% include 'head_tags/scripts/base/alpinejs.txt' %}"></script>
+    <script defer="defer" src="{% include 'head_tags/scripts/base/htmx.txt' %}"></script>
+    <script defer="defer" src="{% include 'head_tags/scripts/base/index.txt' %}"></script>
+    <script defer="defer" src="{% include 'head_tags/scripts/base/runtime.txt' %}"></script>
+    <script defer="defer" src="{% include 'head_tags/scripts/base/vendor.txt' %}"></script>
+    <!-- Child JS -->{% block additional_js %}{% endblock additional_js %}
+    <!-- Base CSS -->
+    <link href="{% include 'head_tags/styles/base/index.txt' %}" rel="stylesheet" />
+    <!-- Child CSS -->{% block additional_css %}{% endblock additional_css %}
   </head>
   <body>
     {% include 'components/header.html' %}

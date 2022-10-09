@@ -1,8 +1,9 @@
 // Initialise Flatpickr widget for date handling
-window.htmx = require('htmx.org')
+import flatpickr from 'flatpickr'
+
 htmx.onLoad(
   (exports.initFlatpickr = function () {
-    fpOptions = {
+    const fpOptions = {
       altInput: true,
       altFormat: 'd-M-y',
     }
