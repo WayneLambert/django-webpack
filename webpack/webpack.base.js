@@ -11,6 +11,7 @@ module.exports = {
     index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
     circle: path.resolve(SRC, 'webpack/assets/scripts/circle.ts'),
+    flatpickr: path.resolve(SRC, 'webpack/assets/scripts/flatpickr.js'),
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
@@ -45,6 +46,10 @@ module.exports = {
           name: 'lodash-es',
           test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
         },
+        lodash: {
+          name: 'flatpickr',
+          test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
+        },
       },
     },
     minimizer: [
@@ -72,10 +77,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(SRC, 'webpack/templates/scripts.ejs'),
-      filename: path.resolve(
-        SRC,
-        'core/templates/core/head_tags/scripts/scripts.txt'
-      ),
+      filename: path.resolve(SRC, 'core/templates/core/head_tags/scripts/scripts.txt'),
       inject: false,
       minify: {
         collapseWhitespace: false,
@@ -85,10 +87,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(SRC, 'webpack/templates/styles.ejs'),
-      filename: path.resolve(
-        SRC,
-        'core/templates/core/head_tags/styles/styles.txt'
-      ),
+      filename: path.resolve(SRC, 'core/templates/core/head_tags/styles/styles.txt'),
       inject: false,
       minify: {
         collapseWhitespace: false,

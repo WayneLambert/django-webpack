@@ -4,28 +4,26 @@ from pathlib import Path
 
 
 current_work_dir = os.getcwd()
+scripts_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/scripts/')
+styles_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/styles/')
 
 base_libs = ['runtime.txt', 'index.txt', 'htmx.txt', 'alpinejs.txt', 'vendor.txt']
 
 
 def clear_down_files():
-    js_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/scripts')
-    css_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/styles')
     dirs = [
-        Path(js_dir) / 'base',
-        Path(js_dir) / 'child',
-        Path(css_dir) / 'base',
-        Path(css_dir) / 'child',
+        Path(scripts_dir) / 'base',
+        Path(scripts_dir) / 'child',
+        Path(styles_dir) / 'base',
+        Path(styles_dir) / 'child',
     ]
     for dir in dirs:
         [f.unlink() for f in dir.iterdir() if f.is_file()]
 
 
 def create_script_and_styles_text_files():
-    scripts_file = os.path.join(
-        current_work_dir, 'core/templates/core/head_tags/scripts/scripts.txt'
-    )
-    styles_file = os.path.join(current_work_dir, 'core/templates/core/head_tags/styles/styles.txt')
+    scripts_file = os.path.join(scripts_dir, 'scripts.txt')
+    styles_file = os.path.join(styles_dir, 'styles.txt')
     tmp_files = [scripts_file, styles_file]
     for tmp_file in tmp_files:
         with open(file=tmp_file, mode='r') as reader, open(file=tmp_file, mode='r+') as writer:
@@ -38,10 +36,7 @@ def create_script_and_styles_text_files():
 
 def _create_script_tag_filename(line):
     filename = line.replace("\n", "").split("/")[-1].split(".")[-2] + ".txt"
-    if line.endswith(".js\n"):
-        filepath = os.path.join(current_work_dir, 'core/templates/core/head_tags/scripts/')
-    else:
-        filepath = os.path.join(current_work_dir, 'core/templates/core/head_tags/styles/')
+    filepath = scripts_dir if line.endswith(".js\n") else styles_dir
     if any(lib in filename for lib in base_libs):
         return f"{filepath}base/{filename}"
     else:
