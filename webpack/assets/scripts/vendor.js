@@ -1,3 +1,6 @@
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
+
 // Import Alpine object from alpinejs library
 import Alpine from 'alpinejs'
 

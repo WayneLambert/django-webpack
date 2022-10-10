@@ -3,12 +3,11 @@
 {% block title %}{{ block.super }} | Flatpickr{% endblock title %}
 
 {% block additional_js %}
-    <script defer="defer" src="/static/bundles/js/vendors-node_modules_flatpickr_dist_esm_index_js.js"></script>
-    <script defer="defer" src="/static/bundles/js/flatpickr.js"></script>
+    <script defer="defer" src="{% include 'head_tags/scripts/child/flatpickr.txt' %}"></script>
 {% endblock additional_js %}
 
 {% block additional_css %}
-    <link href="/static/bundles/css/vendors-node_modules_flatpickr_dist_themes_light_css.css" rel="stylesheet"/>
+    <link href="{% include 'head_tags/styles/child/flatpickr.txt' %}" rel="stylesheet"/>
 {% endblock additional_css %}
 
 {% block content %}

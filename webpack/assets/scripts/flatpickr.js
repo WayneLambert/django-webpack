@@ -1,5 +1,5 @@
 // Initialise Flatpickr widget for date handling
-import flatpickr from './flatpickr'
+const flatpickr = require('flatpickr').default
 
 htmx.onLoad(
   (exports.initFlatpickr = function () {

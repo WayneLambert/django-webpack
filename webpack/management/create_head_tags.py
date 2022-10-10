@@ -7,7 +7,7 @@ current_work_dir = os.getcwd()
 scripts_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/scripts/')
 styles_dir = os.path.join(current_work_dir, 'core/templates/core/head_tags/styles/')
 
-base_libs = ['runtime.txt', 'index.txt', 'htmx.txt', 'alpinejs.txt', 'vendor.txt']
+base_libs = ['bootstrap.txt', 'runtime.txt', 'index.txt', 'htmx.txt', 'alpinejs.txt', 'vendor.txt']
 
 
 def clear_down_files():
@@ -62,7 +62,7 @@ def main():
     print('1) Previous files have been cleared down.')
     tmp_files = create_script_and_styles_text_files()
     create_individual_tags(tmp_files)
-    delete_temp_files(tmp_files)
+    # delete_temp_files(tmp_files)
     print(
         '2) The individual script and style tag files have been '
         + 'created and separated as base and child tags.'

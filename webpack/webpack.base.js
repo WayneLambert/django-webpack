@@ -11,30 +11,36 @@ module.exports = {
     index: path.resolve(SRC, 'webpack/index.ts'),
     vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
     circle: path.resolve(SRC, 'webpack/assets/scripts/circle.ts'),
-    flatpickr: path.resolve(SRC, 'webpack/assets/scripts/flatpickr.js'),
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
+    assetModuleFilename: 'TEST',
     publicPath: '/static/bundles/',
     clean: true,
   },
   resolve: {
+    // What extensions webpack should understand (allows import statements to leave out the extension)
     extensions: ['.ts', '...'],
+    alias: {
+      src: path.resolve(__dirname, '..'),
+    },
   },
   optimization: {
     moduleIds: 'named',
     runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all',
+      hidePathInfo: false,
       maxInitialRequests: Infinity,
       minSize: 0,
       maxSize: Infinity,
       cacheGroups: {
-        corejs: {
-          name: 'core-js',
-          test: /[\\/]node_modules[\\/]core-js[\\/]/,
+        bootstrap: {
+          filename: [contenthash],
+          name: 'bootstrap',
+          test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
         },
         htmx: {
+          filename: [name],
           name: 'htmx',
           test: /[\\/]node_modules[\\/]htmx.org[\\/]/,
         },
@@ -46,7 +52,7 @@ module.exports = {
           name: 'lodash-es',
           test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
         },
-        lodash: {
+        flatpickr: {
           name: 'flatpickr',
           test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
         },

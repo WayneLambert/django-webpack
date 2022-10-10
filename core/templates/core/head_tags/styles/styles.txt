@@ -1,0 +1,2 @@
+/static/bundles/css/flatpickr.css
+/static/bundles/css/index.css
