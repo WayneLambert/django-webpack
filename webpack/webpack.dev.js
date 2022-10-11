@@ -1,6 +1,9 @@
 const base = require('./webpack.base')
+const path = require('path')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const SRC = path.join(__dirname, '..')
 
 const development = {
   name: 'Development Config',
@@ -39,6 +42,7 @@ const development = {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
         use: ['file-loader', 'image-webpack-loader'],
         type: 'asset',
+        exclude: [/.*\.DS_Store/],
         parser: {
           dataUrlCondition: {
             maxSize: 10 * 1024,
@@ -62,3 +66,11 @@ module.exports = mergedConfig
 
 console.log(`The merged config for ${development.mode} mode is as follows:\n`)
 console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
+
+const fs = require('fs')
+const file = path.resolve(SRC, 'webpack/setup/config.json')
+fs.writeFile(file, (data = JSON.stringify(mergedConfig)), function (err) {
+  if (err) {
+    return console.log(err)
+  }
+})

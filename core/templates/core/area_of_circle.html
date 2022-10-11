@@ -1,11 +1,11 @@
 {% extends '_base.html' %}
 
+{% load render_bundle from webpack_loader %}
+
 {% block title %}{{ block.super }} | Area of a Circle {% endblock title %}
 
 {% block additional_js %}
-  <script defer="defer" src="{% include 'head_tags/scripts/child/lodash-es.txt' %}"></script>
-  <script defer="defer" src="{% include 'head_tags/scripts/child/circle.txt' %}"></script>
-  <script defer="defer" src="{% include 'head_tags/scripts/child/webpack_assets_scripts_circle_ts.txt' %}"></script>
+    {% render_bundle 'circle' 'js' attrs="defer" %}
 {% endblock additional_js %}
 
 {% block content %}

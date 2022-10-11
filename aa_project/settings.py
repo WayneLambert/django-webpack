@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "django_extensions",
+    "webpack_loader",
     "core",
 ]
 
@@ -184,4 +185,15 @@ LOGGING = {
             'level': 'DEBUG',
         },
     },
+}
+
+# webpack Integration
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack/setup/stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
+        'SKIP_COMMON_CHUNKS': True,
+    }
 }

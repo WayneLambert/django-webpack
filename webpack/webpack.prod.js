@@ -80,3 +80,11 @@ module.exports = mergedConfig
 
 console.log(`The merged config for ${production.mode} mode is as follows:\n`)
 console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
+
+const fs = require('fs')
+const file = path.resolve(SRC, 'webpack/setup/config.json')
+fs.writeFile(file, (data = JSON.stringify(mergedConfig)), function (err) {
+  if (err) {
+    return console.log(err)
+  }
+})
