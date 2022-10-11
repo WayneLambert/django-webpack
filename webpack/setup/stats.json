@@ -1,0 +1,100 @@
+{
+  "status": "done",
+  "assets": {
+    "css/index.css": {
+      "name": "css/index.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/index.css",
+      "publicPath": "/static/bundles/css/index.css"
+    },
+    "js/index.js": {
+      "name": "js/index.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/index.js",
+      "publicPath": "/static/bundles/js/index.js"
+    },
+    "js/vendor.js": {
+      "name": "js/vendor.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor.js",
+      "publicPath": "/static/bundles/js/vendor.js"
+    },
+    "js/circle.js": {
+      "name": "js/circle.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.js",
+      "publicPath": "/static/bundles/js/circle.js"
+    },
+    "js/runtime.js": {
+      "name": "js/runtime.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
+      "publicPath": "/static/bundles/js/runtime.js"
+    },
+    "js/lodash-es.js": {
+      "name": "js/lodash-es.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash-es.js",
+      "publicPath": "/static/bundles/js/lodash-es.js"
+    },
+    "js/popperjs.js": {
+      "name": "js/popperjs.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/popperjs.js",
+      "publicPath": "/static/bundles/js/popperjs.js"
+    },
+    "css/vendor-node_modules_flatpickr_dist_themes_light_css.css": {
+      "name": "css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
+      "publicPath": "/static/bundles/css/vendor-node_modules_flatpickr_dist_themes_light_css.css"
+    },
+    "js/htmx.org.js": {
+      "name": "js/htmx.org.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.org.js",
+      "publicPath": "/static/bundles/js/htmx.org.js"
+    },
+    "js/bootstrap.js": {
+      "name": "js/bootstrap.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/bootstrap.js",
+      "publicPath": "/static/bundles/js/bootstrap.js"
+    },
+    "js/alpinejs.js": {
+      "name": "js/alpinejs.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.js",
+      "publicPath": "/static/bundles/js/alpinejs.js"
+    },
+    "js/webpack_assets_scripts_circle_ts.js": {
+      "name": "js/webpack_assets_scripts_circle_ts.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/webpack_assets_scripts_circle_ts.js",
+      "publicPath": "/static/bundles/js/webpack_assets_scripts_circle_ts.js"
+    },
+    "images/header.jpg": {
+      "name": "images/header.jpg",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/header.jpg",
+      "publicPath": "/static/bundles/images/header.jpg"
+    },
+    "images/logo.png": {
+      "name": "images/logo.png",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/logo.png",
+      "publicPath": "/static/bundles/images/logo.png"
+    }
+  },
+  "chunks": {
+    "index": [
+      "js/runtime.js",
+      "js/lodash-es.js",
+      "css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
+      "js/webpack_assets_scripts_circle_ts.js",
+      "css/index.css",
+      "js/index.js"
+    ],
+    "vendor": [
+      "js/runtime.js",
+      "js/popperjs.js",
+      "js/htmx.org.js",
+      "js/bootstrap.js",
+      "js/alpinejs.js",
+      "js/vendor.js"
+    ],
+    "circle": [
+      "js/runtime.js",
+      "js/lodash-es.js",
+      "js/webpack_assets_scripts_circle_ts.js",
+      "js/circle.js"
+    ]
+  },
+  "publicPath": "/static/bundles/"
+}

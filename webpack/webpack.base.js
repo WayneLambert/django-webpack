@@ -1,10 +1,10 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 const BundleTracker = require('webpack-bundle-tracker')
-const DashboardPlugin = require('webpack-dashboard/plugin')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
+const { log } = require('console')
 
 const SRC = path.resolve(__dirname, '..')
 
@@ -16,45 +16,33 @@ module.exports = {
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
-    assetModuleFilename: 'TEST',
     publicPath: '/static/bundles/',
     clean: true,
   },
   resolve: {
     // What extensions webpack should understand (allows import statements to leave out the extension)
     extensions: ['.ts', '...'],
-    alias: {
-      src: path.resolve(__dirname, '..'),
-    },
   },
   optimization: {
-    moduleIds: 'named',
     runtimeChunk: 'single',
     splitChunks: {
+      chunks: 'all',
       hidePathInfo: false,
       maxInitialRequests: Infinity,
       minSize: 0,
       maxSize: Infinity,
       cacheGroups: {
-        bootstrap: {
-          name: 'bootstrap',
-          test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
-        },
-        htmx: {
-          name: 'htmx',
-          test: /[\\/]node_modules[\\/]htmx.org[\\/]/,
-        },
-        alpinejs: {
-          name: 'alpinejs',
-          test: /[\\/]node_modules[\\/]alpinejs[\\/]/,
-        },
-        lodash: {
-          name: 'lodash-es',
-          test: /[\\/]node_modules[\\/]lodash-es[\\/]/,
-        },
-        flatpickr: {
-          name: 'flatpickr',
-          test: /[\\/]node_modules[\\/]flatpickr[\\/]/,
+        vendor: {
+          test: /[\\\/]node_modules[\\\/]/,
+          name(module) {
+            if (module.context !== SRC) {
+              console.log(`The module.context is ${module.context}`)
+              let packageName = module.context.match(/[\\\/]node_modules[\\\/](.*?)([\\\/]|$)/)[1]
+              let packageName2 = `${packageName.replace('@', '')}`
+              console.log(packageName2)
+              return packageName2
+            }
+          },
         },
       },
     },
@@ -81,26 +69,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/scripts.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/head_tags/scripts/scripts.txt'),
-      inject: false,
-      minify: {
-        collapseWhitespace: false,
-        keepClosingSlash: true,
-      },
-      xhtml: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/styles.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/head_tags/styles/styles.txt'),
-      inject: false,
-      minify: {
-        collapseWhitespace: false,
-        keepClosingSlash: true,
-      },
-      xhtml: true,
-    }),
     new CopyPlugin({
       patterns: [
         {
@@ -109,22 +77,27 @@ module.exports = {
         },
       ],
     }),
+    new webpack.ids.HashedModuleIdsPlugin(),
     new WebpackShellPluginNext({
       onAfterDone: {
-        scripts: ['python ./webpack/management/create_head_tags.py'],
+        scripts: [
+          'npx prettier --write ./webpack/setup/config.json',
+          'echo "The merged config.json was saved."',
+          'echo "**********************************************************************"',
+        ],
         blocking: true,
         parallel: false,
       },
     }),
     new BundleTracker({
-      filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
+      filename: path.resolve(SRC, 'webpack/setup/stats.json'),
     }),
-    new DashboardPlugin({}),
   ],
   stats: {
     errorDetails: false,
     errorStack: false,
     modules: true,
     warnings: true,
+    // assets: false,
   },
 }

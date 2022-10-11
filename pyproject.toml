@@ -1,9 +1,9 @@
 # -- POETRY CONFIG ----------------------------------------------------------------------
 
 [tool.poetry]
-name = "django-webpack-example"
+name = "django-webpack"
 version = "0.1.0"
-description = "Django Webpack Example Project"
+description = "An Example of a Django Project with Webpack Integration"
 authors = ["Wayne Lambert <wayne.a.lambert@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -12,6 +12,7 @@ Django = "4.1.2"
 django-htmx = "1.12.2"
 rich = "12.6.0"
 httpx = "0.23"
+django-webpack-loader = "1.6.0"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "3.7.0"

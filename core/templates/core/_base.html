@@ -1,3 +1,7 @@
+{% load static %}
+
+{% load render_bundle from webpack_loader %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,20 +10,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Django Webpack{% block title %}{% endblock title %}</title>
     <!-- Base JS -->
-    <script defer="defer" src="{% include 'head_tags/scripts/base/bootstrap.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/alpinejs.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/htmx.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/index.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/runtime.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/vendor.txt' %}"></script>
+    {% render_bundle 'index' 'js' attrs="defer" %}
+    {% render_bundle 'vendor' 'js' attrs="defer" %}
+
     <!-- Child JS -->{% block additional_js %}{% endblock additional_js %}
     <!-- Base CSS -->
-    <link href="{% include 'head_tags/styles/base/index.txt' %}" rel="stylesheet" />
+    {% render_bundle 'index' 'css' %}
     <!-- Child CSS -->{% block additional_css %}{% endblock additional_css %}
   </head>
   <body>
     {% include 'components/header.html' %}
-    <img src="/static/bundles/images/header.jpg" class="header-image" alt="Header"/>
+    <img src="{% static 'bundles/images/header.jpg' %}" class="header-image" alt="Header"/>
     {% block content %}{% endblock content %}
   </body>
 </html>

@@ -1,6 +1,12 @@
 {% extends '_base.html' %}
 
+{% load render_bundle from webpack_loader %}
+
 {% block title %}{{ block.super }} | HTMX{% endblock title %}
+
+{% block additional_js %}
+  {% comment %} {% render_bundle 'htmx.org' 'js' attrs="defer" %} {% endcomment %}
+{% endblock additional_js %}
 
 {% block content %}<div class="container p-2 mx-auto">
   <div class="pt-3">

@@ -1,0 +1,148 @@
+{
+  "entry": {
+    "index": "./webpack/index.ts",
+    "vendor": "./webpack/assets/scripts/vendor.js",
+    "circle": "./webpack/assets/scripts/circle.ts"
+  },
+  "output": {
+    "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
+    "publicPath": "/static/bundles/",
+    "clean": true,
+    "filename": "js/[name].js"
+  },
+  "resolve": { "extensions": [".ts", "..."] },
+  "optimization": {
+    "runtimeChunk": "single",
+    "splitChunks": {
+      "chunks": "all",
+      "hidePathInfo": false,
+      "maxInitialRequests": null,
+      "minSize": 0,
+      "maxSize": null,
+      "cacheGroups": { "vendor": { "test": {} } }
+    },
+    "minimizer": [
+      {
+        "options": {
+          "test": {},
+          "extractComments": false,
+          "parallel": true,
+          "minimizer": { "options": {} }
+        }
+      }
+    ]
+  },
+  "module": {
+    "rules": [
+      { "test": {}, "use": "html-loader", "exclude": "/node_modules/" },
+      { "test": {}, "exclude": {}, "use": { "loader": "babel-loader" } },
+      { "test": {}, "exclude": {}, "use": ["style-loader", "css-loader"] },
+      {
+        "test": {},
+        "include": {},
+        "use": [
+          "style-loader",
+          {
+            "loader": "css-loader",
+            "options": {
+              "modules": { "localIdentName": "[local]--[md4:hash:7]" }
+            }
+          }
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
+          "css-loader",
+          "sass-loader"
+        ]
+      },
+      {
+        "test": {},
+        "use": ["file-loader", "image-webpack-loader"],
+        "type": "asset",
+        "exclude": [{}],
+        "parser": { "dataUrlCondition": { "maxSize": 10240 } },
+        "generator": { "filename": "images/[name][ext]" }
+      }
+    ]
+  },
+  "plugins": [
+    {
+      "patterns": [
+        {
+          "from": "/Users/wayne-lambert/dev/django-webpack/src/webpack/assets/images",
+          "to": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images"
+        }
+      ],
+      "options": {}
+    },
+    {
+      "options": {
+        "context": null,
+        "hashFunction": "md4",
+        "hashDigest": "base64",
+        "hashDigestLength": 4
+      }
+    },
+    {
+      "env": {},
+      "dev": true,
+      "shell": true,
+      "safe": false,
+      "logging": true,
+      "swallowError": false,
+      "onBeforeBuild": { "scripts": [], "blocking": false, "parallel": false },
+      "onBeforeNormalRun": {
+        "scripts": [],
+        "blocking": false,
+        "parallel": false
+      },
+      "onBuildStart": { "scripts": [], "blocking": false, "parallel": false },
+      "onBuildEnd": { "scripts": [], "blocking": false, "parallel": false },
+      "onBuildExit": { "scripts": [], "blocking": false, "parallel": false },
+      "onBuildError": { "scripts": [], "blocking": false, "parallel": false },
+      "onWatchRun": { "scripts": [], "blocking": false, "parallel": false },
+      "onDoneWatch": { "scripts": [], "blocking": false, "parallel": false },
+      "onAfterDone": {
+        "scripts": [
+          "npx prettier --write ./webpack/setup/config.json",
+          "echo \"The merged config.json was saved.\"",
+          "echo \"**********************************************************************\""
+        ],
+        "blocking": true,
+        "parallel": false
+      }
+    },
+    {
+      "options": {
+        "filename": "/Users/wayne-lambert/dev/django-webpack/src/webpack/setup/stats.json"
+      },
+      "contents": { "status": "initialization", "assets": {}, "chunks": {} },
+      "name": "BundleTrackerPlugin",
+      "outputChunkDir": "",
+      "outputTrackerFile": "",
+      "outputTrackerDir": ""
+    },
+    {
+      "_sortedModulesCache": {},
+      "options": {
+        "filename": "css/[name].css",
+        "ignoreOrder": false,
+        "runtime": true,
+        "chunkFilename": "css/[name].css"
+      },
+      "runtimeOptions": { "linkType": "text/css" }
+    }
+  ],
+  "stats": {
+    "errorDetails": false,
+    "errorStack": false,
+    "modules": true,
+    "warnings": true
+  },
+  "name": "Development Config",
+  "mode": "development",
+  "devtool": "eval-source-map"
+}
