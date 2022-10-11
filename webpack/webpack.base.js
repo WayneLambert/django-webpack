@@ -3,14 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const WebpackShellPluginNext = require('webpack-shell-plugin-next')
+const BundleTracker = require('webpack-bundle-tracker')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const SRC = path.resolve(__dirname, '..')
 
 module.exports = {
   entry: {
-    index: path.resolve(SRC, 'webpack/index.ts'),
-    vendor: path.resolve(SRC, 'webpack/assets/scripts/vendor.js'),
-    circle: path.resolve(SRC, 'webpack/assets/scripts/circle.ts'),
+    index: './webpack/index.ts',
+    vendor: './webpack/assets/scripts/vendor.js',
+    circle: './webpack/assets/scripts/circle.ts',
   },
   output: {
     path: path.resolve(SRC, 'static/bundles'),
@@ -35,12 +37,10 @@ module.exports = {
       maxSize: Infinity,
       cacheGroups: {
         bootstrap: {
-          filename: [contenthash],
           name: 'bootstrap',
           test: /[\\/]node_modules[\\/]bootstrap[\\/]/,
         },
         htmx: {
-          filename: [name],
           name: 'htmx',
           test: /[\\/]node_modules[\\/]htmx.org[\\/]/,
         },
@@ -116,6 +116,10 @@ module.exports = {
         parallel: false,
       },
     }),
+    new BundleTracker({
+      filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
+    }),
+    new DashboardPlugin({}),
   ],
   stats: {
     errorDetails: false,

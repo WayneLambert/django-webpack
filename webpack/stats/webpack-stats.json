@@ -1,172 +1,70 @@
 {
   "status": "done",
   "assets": {
+    "css/index.css": {
+      "name": "css/index.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/index.css",
+      "publicPath": "/static/bundles/css/index.css"
+    },
+    "js/index.js": {
+      "name": "js/index.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/index.js",
+      "publicPath": "/static/bundles/js/index.js"
+    },
+    "js/vendor.js": {
+      "name": "js/vendor.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor.js",
+      "publicPath": "/static/bundles/js/vendor.js"
+    },
+    "js/circle.js": {
+      "name": "js/circle.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.js",
+      "publicPath": "/static/bundles/js/circle.js"
+    },
+    "js/runtime.js": {
+      "name": "js/runtime.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
+      "publicPath": "/static/bundles/js/runtime.js"
+    },
+    "images/.DS_Store": {
+      "name": "images/.DS_Store",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/.DS_Store",
+      "publicPath": "/static/bundles/images/.DS_Store"
+    },
     "images/header.jpg": {
       "name": "images/header.jpg",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/images/header.jpg",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/header.jpg",
       "publicPath": "/static/bundles/images/header.jpg"
     },
-    "../../core/templates/core/head_tags/temp.txt": {
-      "name": "../../core/templates/core/head_tags/temp.txt",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/core/templates/core/head_tags/temp.txt",
-      "publicPath": "/static/bundles/../../core/templates/core/head_tags/temp.txt"
+    "images/logo.png": {
+      "name": "images/logo.png",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/logo.png",
+      "publicPath": "/static/bundles/images/logo.png"
     },
-    "js/index.da7357153c4f.js": {
-      "name": "js/index.da7357153c4f.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/index.da7357153c4f.js",
-      "publicPath": "/static/bundles/js/index.da7357153c4f.js"
+    "../../core/templates/core/head_tags/scripts/scripts.txt": {
+      "name": "../../core/templates/core/head_tags/scripts/scripts.txt",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/core/templates/core/head_tags/scripts/scripts.txt",
+      "publicPath": "/static/bundles/../../core/templates/core/head_tags/scripts/scripts.txt"
     },
-    "js/flatpickr.71df437fc66c.js": {
-      "name": "js/flatpickr.71df437fc66c.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/flatpickr.71df437fc66c.js",
-      "publicPath": "/static/bundles/js/flatpickr.71df437fc66c.js"
-    },
-    "js/circle.005660a1b1a1.js": {
-      "name": "js/circle.005660a1b1a1.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/circle.005660a1b1a1.js",
-      "publicPath": "/static/bundles/js/circle.005660a1b1a1.js"
-    },
-    "css/index.4b4400a49fc98eb0db8d.css": {
-      "name": "css/index.4b4400a49fc98eb0db8d.css",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.4b4400a49fc98eb0db8d.css",
-      "publicPath": "/static/bundles/css/index.4b4400a49fc98eb0db8d.css"
-    },
-    "js/vendor.e82e9bfd58d3.js": {
-      "name": "js/vendor.e82e9bfd58d3.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.e82e9bfd58d3.js",
-      "publicPath": "/static/bundles/js/vendor.e82e9bfd58d3.js"
-    },
-    "js/runtime.b71ee0e856f0.js": {
-      "name": "js/runtime.b71ee0e856f0.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/runtime.b71ee0e856f0.js",
-      "publicPath": "/static/bundles/js/runtime.b71ee0e856f0.js"
-    },
-    "js/core-js.ed46701a4b2c.js": {
-      "name": "js/core-js.ed46701a4b2c.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/core-js.ed46701a4b2c.js",
-      "publicPath": "/static/bundles/js/core-js.ed46701a4b2c.js"
-    },
-    "js/htmx.a7f33f837413.js": {
-      "name": "js/htmx.a7f33f837413.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/htmx.a7f33f837413.js",
-      "publicPath": "/static/bundles/js/htmx.a7f33f837413.js"
-    },
-    "js/lodash-es.fab2a968ef2b.js": {
-      "name": "js/lodash-es.fab2a968ef2b.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/lodash-es.fab2a968ef2b.js",
-      "publicPath": "/static/bundles/js/lodash-es.fab2a968ef2b.js"
-    },
-    "js/alpinejs.bb6e519cc640.js": {
-      "name": "js/alpinejs.bb6e519cc640.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/alpinejs.bb6e519cc640.js",
-      "publicPath": "/static/bundles/js/alpinejs.bb6e519cc640.js"
-    },
-    "js/393.13d559e47ee0.js": {
-      "name": "js/393.13d559e47ee0.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/393.13d559e47ee0.js",
-      "publicPath": "/static/bundles/js/393.13d559e47ee0.js"
-    },
-    "css/194.b4f4f606a7aef824657c.css": {
-      "name": "css/194.b4f4f606a7aef824657c.css",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/194.b4f4f606a7aef824657c.css",
-      "publicPath": "/static/bundles/css/194.b4f4f606a7aef824657c.css"
-    },
-    "js/818.945bed9be59e.js": {
-      "name": "js/818.945bed9be59e.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/818.945bed9be59e.js",
-      "publicPath": "/static/bundles/js/818.945bed9be59e.js"
-    },
-    "js/690.4a2f9c9e95f2.js": {
-      "name": "js/690.4a2f9c9e95f2.js",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/690.4a2f9c9e95f2.js",
-      "publicPath": "/static/bundles/js/690.4a2f9c9e95f2.js"
-    },
-    "css/index.4b4400a49fc98eb0db8d.css.map": {
-      "name": "css/index.4b4400a49fc98eb0db8d.css.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/index.4b4400a49fc98eb0db8d.css.map",
-      "publicPath": "/static/bundles/css/index.4b4400a49fc98eb0db8d.css.map"
-    },
-    "js/vendor.e82e9bfd58d3.js.map": {
-      "name": "js/vendor.e82e9bfd58d3.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/vendor.e82e9bfd58d3.js.map",
-      "publicPath": "/static/bundles/js/vendor.e82e9bfd58d3.js.map"
-    },
-    "js/runtime.b71ee0e856f0.js.map": {
-      "name": "js/runtime.b71ee0e856f0.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/runtime.b71ee0e856f0.js.map",
-      "publicPath": "/static/bundles/js/runtime.b71ee0e856f0.js.map"
-    },
-    "js/core-js.ed46701a4b2c.js.map": {
-      "name": "js/core-js.ed46701a4b2c.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/core-js.ed46701a4b2c.js.map",
-      "publicPath": "/static/bundles/js/core-js.ed46701a4b2c.js.map"
-    },
-    "js/htmx.a7f33f837413.js.map": {
-      "name": "js/htmx.a7f33f837413.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/htmx.a7f33f837413.js.map",
-      "publicPath": "/static/bundles/js/htmx.a7f33f837413.js.map"
-    },
-    "js/lodash-es.fab2a968ef2b.js.map": {
-      "name": "js/lodash-es.fab2a968ef2b.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/lodash-es.fab2a968ef2b.js.map",
-      "publicPath": "/static/bundles/js/lodash-es.fab2a968ef2b.js.map"
-    },
-    "js/alpinejs.bb6e519cc640.js.map": {
-      "name": "js/alpinejs.bb6e519cc640.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/alpinejs.bb6e519cc640.js.map",
-      "publicPath": "/static/bundles/js/alpinejs.bb6e519cc640.js.map"
-    },
-    "js/393.13d559e47ee0.js.map": {
-      "name": "js/393.13d559e47ee0.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/393.13d559e47ee0.js.map",
-      "publicPath": "/static/bundles/js/393.13d559e47ee0.js.map"
-    },
-    "css/194.b4f4f606a7aef824657c.css.map": {
-      "name": "css/194.b4f4f606a7aef824657c.css.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/css/194.b4f4f606a7aef824657c.css.map",
-      "publicPath": "/static/bundles/css/194.b4f4f606a7aef824657c.css.map"
-    },
-    "js/818.945bed9be59e.js.map": {
-      "name": "js/818.945bed9be59e.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/818.945bed9be59e.js.map",
-      "publicPath": "/static/bundles/js/818.945bed9be59e.js.map"
-    },
-    "js/690.4a2f9c9e95f2.js.map": {
-      "name": "js/690.4a2f9c9e95f2.js.map",
-      "path": "/Users/wayne-lambert/dev/webpack-example/src/static/bundles/js/690.4a2f9c9e95f2.js.map",
-      "publicPath": "/static/bundles/js/690.4a2f9c9e95f2.js.map"
+    "../../core/templates/core/head_tags/styles/styles.txt": {
+      "name": "../../core/templates/core/head_tags/styles/styles.txt",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/core/templates/core/head_tags/styles/styles.txt",
+      "publicPath": "/static/bundles/../../core/templates/core/head_tags/styles/styles.txt"
     }
   },
   "chunks": {
     "index": [
-      "js/runtime.b71ee0e856f0.js",
-      "js/core-js.ed46701a4b2c.js",
-      "js/lodash-es.fab2a968ef2b.js",
-      "css/194.b4f4f606a7aef824657c.css",
-      "js/818.945bed9be59e.js",
-      "js/index.da7357153c4f.js",
-      "css/index.4b4400a49fc98eb0db8d.css"
+      "js/runtime.js",
+      "css/index.css",
+      "js/index.js"
     ],
     "vendor": [
-      "js/runtime.b71ee0e856f0.js",
-      "js/htmx.a7f33f837413.js",
-      "js/alpinejs.bb6e519cc640.js",
-      "js/393.13d559e47ee0.js",
-      "js/690.4a2f9c9e95f2.js",
-      "js/vendor.e82e9bfd58d3.js"
-    ],
-    "flatpickr": [
-      "js/runtime.b71ee0e856f0.js",
-      "js/htmx.a7f33f837413.js",
-      "js/690.4a2f9c9e95f2.js",
-      "js/flatpickr.71df437fc66c.js"
+      "js/runtime.js",
+      "js/vendor.js"
     ],
     "circle": [
-      "js/runtime.b71ee0e856f0.js",
-      "js/core-js.ed46701a4b2c.js",
-      "js/lodash-es.fab2a968ef2b.js",
-      "js/818.945bed9be59e.js",
-      "js/circle.005660a1b1a1.js"
+      "js/runtime.js",
+      "js/circle.js"
     ]
   },
   "publicPath": "/static/bundles/"

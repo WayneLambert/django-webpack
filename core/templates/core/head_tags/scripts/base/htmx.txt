@@ -1,1 +1,0 @@
-/static/bundles/js/htmx.js

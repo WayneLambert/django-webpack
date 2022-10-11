@@ -4,7 +4,7 @@
     "description": "Webpack Example Application",
     "main": "webpack/index.ts",
     "scripts": {
-        "dev": "cross-env BABEL_ENV=dev webpack --watch --config webpack/webpack.dev.js --progress --colors",
+        "dev": "cross-env BABEL_ENV=dev webpack --watch --config webpack/webpack.dev.js",
         "build": "cross-env BABEL_ENV=prod webpack --progress --config webpack/webpack.prod.js",
         "bundle-analyzer": "cross-env BABEL_ENV=prod webpack --config webpack/webpack.analyze.js",
         "typecheck": "tsc --noEmit"
@@ -49,6 +49,7 @@
         "webpack-bundle-analyzer": "^4.6.1",
         "webpack-bundle-tracker": "^1.6.0",
         "webpack-cli": "^4.10.0",
+        "webpack-dashboard": "^3.3.7",
         "webpack-merge": "^5.8.0",
         "webpack-shell-plugin-next": "^2.2.2"
     },

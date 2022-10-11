@@ -1,11 +1,4 @@
 /static/bundles/js/runtime.js
-/static/bundles/js/lodash-es.js
-/static/bundles/js/flatpickr.js
-/static/bundles/js/webpack_assets_scripts_circle_ts.js
 /static/bundles/js/index.js
-/static/bundles/js/htmx.js
-/static/bundles/js/bootstrap.js
-/static/bundles/js/alpinejs.js
-/static/bundles/js/vendors-node_modules_popperjs_core_lib_index_js.js
 /static/bundles/js/vendor.js
 /static/bundles/js/circle.js

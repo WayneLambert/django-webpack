@@ -1,6 +1,5 @@
 const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
-const BundleTracker = require('webpack-bundle-tracker')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 const glob = require('glob')
@@ -72,9 +71,6 @@ const production = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
-    }),
-    new BundleTracker({
-      filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
     }),
   ],
 }
