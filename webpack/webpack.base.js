@@ -36,11 +36,8 @@ module.exports = {
           test: /[\\\/]node_modules[\\\/]/,
           name(module) {
             if (module.context !== SRC) {
-              console.log(`The module.context is ${module.context}`)
               let packageName = module.context.match(/[\\\/]node_modules[\\\/](.*?)([\\\/]|$)/)[1]
-              let packageName2 = `${packageName.replace('@', '')}`
-              console.log(packageName2)
-              return packageName2
+              return `npm.${packageName.replace('@', '')}`
             }
           },
         },
