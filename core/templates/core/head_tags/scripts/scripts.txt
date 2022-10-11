@@ -1,4 +1,0 @@
-/static/bundles/js/runtime.js
-/static/bundles/js/index.js
-/static/bundles/js/vendor.js
-/static/bundles/js/circle.js

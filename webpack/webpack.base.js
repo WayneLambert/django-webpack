@@ -1,10 +1,7 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 const BundleTracker = require('webpack-bundle-tracker')
-const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const SRC = path.resolve(__dirname, '..')
 
@@ -81,26 +78,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/scripts.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/head_tags/scripts/scripts.txt'),
-      inject: false,
-      minify: {
-        collapseWhitespace: false,
-        keepClosingSlash: true,
-      },
-      xhtml: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(SRC, 'webpack/templates/styles.ejs'),
-      filename: path.resolve(SRC, 'core/templates/core/head_tags/styles/styles.txt'),
-      inject: false,
-      minify: {
-        collapseWhitespace: false,
-        keepClosingSlash: true,
-      },
-      xhtml: true,
-    }),
     new CopyPlugin({
       patterns: [
         {
@@ -109,17 +86,9 @@ module.exports = {
         },
       ],
     }),
-    new WebpackShellPluginNext({
-      onAfterDone: {
-        scripts: ['python ./webpack/management/create_head_tags.py'],
-        blocking: true,
-        parallel: false,
-      },
-    }),
     new BundleTracker({
       filename: path.resolve(SRC, 'webpack/stats/webpack-stats.json'),
     }),
-    new DashboardPlugin({}),
   ],
   stats: {
     errorDetails: false,

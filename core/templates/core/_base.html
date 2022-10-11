@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Django Webpack{% block title %}{% endblock title %}</title>
     <!-- Base JS -->
-    <script defer="defer" src="{% include 'head_tags/scripts/base/bootstrap.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/alpinejs.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/htmx.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/index.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/runtime.txt' %}"></script>
-    <script defer="defer" src="{% include 'head_tags/scripts/base/vendor.txt' %}"></script>
+
     <!-- Child JS -->{% block additional_js %}{% endblock additional_js %}
     <!-- Base CSS -->
-    <link href="{% include 'head_tags/styles/base/index.txt' %}" rel="stylesheet" />
+
     <!-- Child CSS -->{% block additional_css %}{% endblock additional_css %}
   </head>
   <body>
