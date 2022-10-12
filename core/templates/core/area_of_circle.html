@@ -4,9 +4,9 @@
 
 {% block title %}{{ block.super }} | Area of a Circle {% endblock title %}
 
-{% block additional_js %}
+{% block additional_scripts %}
     {% render_bundle 'circle' 'js' attrs="defer" %}
-{% endblock additional_js %}
+{% endblock additional_scripts %}
 
 {% block content %}
   <div class="container p-2 mx-auto">

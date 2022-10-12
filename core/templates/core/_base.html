@@ -13,10 +13,10 @@
     {% render_bundle 'index' 'js' attrs="defer" %}
     {% render_bundle 'vendor' 'js' attrs="defer" %}
 
-    <!-- Child JS -->{% block additional_js %}{% endblock additional_js %}
+    <!-- Child JS -->{% block additional_scripts %}{% endblock additional_scripts %}
     <!-- Base CSS -->
     {% render_bundle 'index' 'css' %}
-    <!-- Child CSS -->{% block additional_css %}{% endblock additional_css %}
+    <!-- Child CSS -->{% block additional_styles %}{% endblock additional_styles %}
   </head>
   <body>
     {% include 'components/header.html' %}
