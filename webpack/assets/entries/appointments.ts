@@ -1,5 +1,3 @@
-import 'flatpickr/dist/themes/light.css';
-
 function getComponent() {
     const flatpickr = require('flatpickr').default;
   return import('lodash')

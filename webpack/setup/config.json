@@ -2,7 +2,7 @@
   "context": "/Users/wayne-lambert/dev/django-webpack/src",
   "entry": {
     "index": { "import": "./webpack/assets/entries/index.ts" },
-    "flatpickr": { "import": "./webpack/assets/entries/flatpickr.ts" },
+    "appointments": { "import": "./webpack/assets/entries/appointments.ts" },
     "circle": { "import": "./webpack/assets/entries/circle.ts" }
   },
   "output": {
@@ -20,7 +20,13 @@
       "maxInitialRequests": null,
       "minSize": 0,
       "maxSize": null,
-      "cacheGroups": { "vendor": { "test": {} } }
+      "cacheGroups": {
+        "bootstrap": { "test": {}, "name": "bootstrap" },
+        "lodash": { "test": {}, "name": "lodash" },
+        "htmx": { "test": {}, "name": "htmx" },
+        "alpinejs": { "test": {}, "name": "alpinejs" },
+        "flatpickr": { "test": {}, "name": "flatpickr" }
+      }
     },
     "minimizer": [
       {

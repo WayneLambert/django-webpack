@@ -12,8 +12,8 @@ module.exports = {
     index: {
       import: './webpack/assets/entries/index.ts',
     },
-    flatpickr: {
-      import: './webpack/assets/entries/flatpickr.ts',
+    appointments: {
+      import: './webpack/assets/entries/appointments.ts',
     },
     circle: {
       import: './webpack/assets/entries/circle.ts',
@@ -37,14 +37,25 @@ module.exports = {
       minSize: 0,
       maxSize: Infinity,
       cacheGroups: {
-        vendor: {
-          test: /[\\\/]node_modules[\\\/]/,
-          name(module) {
-            if (module.context !== module.context) {
-              let packageName = module.context.match(/[\\\/]node_modules[\\\/](.*?)([\\\/]|$)/)[1]
-              return `npm.${packageName.replace('@', '')}`
-            }
-          },
+        bootstrap: {
+          test: /[\\\/]node_modules[\\\/]bootstrap[\\\/]/,
+          name: 'bootstrap',
+        },
+        lodash: {
+          test: /[\\\/]node_modules[\\\/]lodash-es[\\\/]/,
+          name: 'lodash',
+        },
+        htmx: {
+          test: /[\\\/]node_modules[\\\/]htmx.org[\\\/]/,
+          name: 'htmx',
+        },
+        alpinejs: {
+          test: /[\\\/]node_modules[\\\/]alpinejs[\\\/]/,
+          name: 'alpinejs',
+        },
+        flatpickr: {
+          test: /[\\\/]node_modules[\\\/]flatpickr[\\\/]/,
+          name: 'flatpickr',
         },
       },
     },

@@ -7,9 +7,9 @@ def home(request):
     return render(request, "home.html", {})
 
 
-def flatpickr(request):
+def appointments(request):
     """Example returning Flatpickr integration"""
-    return render(request, "flatpickr.html", {})
+    return render(request, "appointments.html", {})
 
 
 def area_of_circle(request):

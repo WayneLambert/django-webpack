@@ -11,10 +11,10 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/index.js",
       "publicPath": "/static/bundles/js/index.js"
     },
-    "js/flatpickr.js": {
-      "name": "js/flatpickr.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
-      "publicPath": "/static/bundles/js/flatpickr.js"
+    "js/appointments.js": {
+      "name": "js/appointments.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.js",
+      "publicPath": "/static/bundles/js/appointments.js"
     },
     "js/circle.js": {
       "name": "js/circle.js",
@@ -26,20 +26,30 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
       "publicPath": "/static/bundles/js/runtime.js"
     },
-    "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js": {
-      "name": "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
-      "publicPath": "/static/bundles/js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js"
+    "js/vendors-node_modules_lodash_lodash_js.js": {
+      "name": "js/vendors-node_modules_lodash_lodash_js.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendors-node_modules_lodash_lodash_js.js",
+      "publicPath": "/static/bundles/js/vendors-node_modules_lodash_lodash_js.js"
     },
-    "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js": {
-      "name": "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
-      "publicPath": "/static/bundles/js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js"
+    "css/flatpickr.css": {
+      "name": "css/flatpickr.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/flatpickr.css",
+      "publicPath": "/static/bundles/css/flatpickr.css"
     },
-    "js/vendor-node_modules_lodash_lodash_js.js": {
-      "name": "js/vendor-node_modules_lodash_lodash_js.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_lodash_lodash_js.js",
-      "publicPath": "/static/bundles/js/vendor-node_modules_lodash_lodash_js.js"
+    "js/flatpickr.js": {
+      "name": "js/flatpickr.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
+      "publicPath": "/static/bundles/js/flatpickr.js"
+    },
+    "js/htmx.js": {
+      "name": "js/htmx.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.js",
+      "publicPath": "/static/bundles/js/htmx.js"
+    },
+    "js/alpinejs.js": {
+      "name": "js/alpinejs.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.js",
+      "publicPath": "/static/bundles/js/alpinejs.js"
     },
     "images/header.jpg": {
       "name": "images/header.jpg",
@@ -55,14 +65,18 @@
   "chunks": {
     "index": [
       "js/runtime.js",
-      "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
+      "css/flatpickr.css",
+      "js/flatpickr.js",
+      "js/htmx.js",
+      "js/alpinejs.js",
       "css/index.css",
       "js/index.js"
     ],
-    "flatpickr": [
+    "appointments": [
       "js/runtime.js",
-      "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
-      "js/flatpickr.js"
+      "css/flatpickr.css",
+      "js/flatpickr.js",
+      "js/appointments.js"
     ],
     "circle": [
       "js/runtime.js",

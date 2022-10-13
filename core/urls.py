@@ -7,7 +7,7 @@ app_name = "core"
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("flatpickr/", views.flatpickr, name="flatpickr"),
+    path("appointments/", views.appointments, name="appointments"),
     path("area-of-circle/", views.area_of_circle, name="area_of_circle"),
     path("htmx/", views.htmx, name="hx_htmx"),
     path("hx-fetch-htmx/", views.hx_fetch_htmx, name="hx_fetch_htmx"),
