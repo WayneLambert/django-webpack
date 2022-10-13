@@ -131,6 +131,9 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+MEDIA_URL = '/media/'
+DEFAULT_IMAGES_ROOT = Path(BASE_DIR / 'media/aa_project/static/default_images')
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 

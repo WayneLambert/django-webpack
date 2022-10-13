@@ -58,7 +58,12 @@
         "alpinejs": "^3.10.3",
         "bootstrap": "^5.2.1",
         "flatpickr": "^4.6.13",
-        "htmx.org": "^1.8.0",
+        "htmx.org": "^1.8.2",
         "lodash-es": "^4.17.21"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
     }
 }

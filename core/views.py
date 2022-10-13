@@ -1,5 +1,9 @@
+from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import ListView
+
+from .models import Task
 
 
 def home(request):
@@ -39,3 +43,9 @@ def alpine(request):
     usage/integration
     """
     return render(request, "alpine.html", {})
+
+
+class TaskListView(ListView):
+    model = Task
+    template_name = 'tasks.html'
+    context_object_name = 'tasks'

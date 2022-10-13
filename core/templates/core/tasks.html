@@ -1,0 +1,38 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <div class="p-5">
+    <div class="app-card app-card-table shadow-sm mb-5">
+      <div class="app-card-body">
+        <div class="table-responsive table-striped">
+          <table id="datatable-1" class="table app-table-hover mb-0 text-left">
+            <thead class="table-dark bg-primary text-white">
+              <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Desc</th>
+                <th>Is Priority</th>
+                <th>Created By</th>
+                <th>Created Date/Time</th>
+                <th>Updated Date/Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for task in tasks %}
+                <tr>
+                  <td class="cell">{{ task.pk }}</td>
+                  <td class="cell">{{ task.title }}</td>
+                  <td class="cell">{{ task.desc }}</td>
+                  <td class="cell">{{ task.is_priority }}</td>
+                  <td class="cell">{{ task.created_by.get_full_name }}</td>
+                  <td class="cell">{{ task.created_date }}</td>
+                  <td class="cell">{{ task.updated_date }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -12,4 +12,5 @@ urlpatterns = [
     path("htmx/", views.htmx, name="hx_htmx"),
     path("hx-fetch-htmx/", views.hx_fetch_htmx, name="hx_fetch_htmx"),
     path("alpine/", views.alpine, name="alpine"),
+    path('tasks/', views.TaskListView.as_view(), name='tasks'),
 ]
