@@ -1,6 +1,6 @@
 function getComponent() {
     const flatpickr = require('flatpickr').default;
-  return import('lodash')
+  return import('lodash-es')
     .then(({ default: _ }) => {
         const fpOptions = {
             altInput: true,

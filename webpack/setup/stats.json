@@ -41,6 +41,11 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
       "publicPath": "/static/bundles/js/flatpickr.js"
     },
+    "js/lodash.js": {
+      "name": "js/lodash.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.js",
+      "publicPath": "/static/bundles/js/lodash.js"
+    },
     "js/htmx.js": {
       "name": "js/htmx.js",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.js",
