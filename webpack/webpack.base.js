@@ -53,10 +53,6 @@ module.exports = {
           test: /[\\\/]node_modules[\\\/]alpinejs[\\\/]/,
           name: 'alpinejs',
         },
-        flatpickr: {
-          test: /[\\\/]node_modules[\\\/]flatpickr[\\\/]/,
-          name: 'flatpickr',
-        },
       },
     },
     minimizer: [

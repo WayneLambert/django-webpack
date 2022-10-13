@@ -2,7 +2,7 @@
     "compilerOptions": {
         "allowJs": true,
         "noEmit": true,
-        "module": "es2015",
+        "module": "es2020",
         "target": "es2015",
         "noImplicitAny": true,
         "removeComments": true,

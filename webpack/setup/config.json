@@ -24,8 +24,7 @@
         "bootstrap": { "test": {}, "name": "bootstrap" },
         "lodash": { "test": {}, "name": "lodash" },
         "htmx": { "test": {}, "name": "htmx" },
-        "alpinejs": { "test": {}, "name": "alpinejs" },
-        "flatpickr": { "test": {}, "name": "flatpickr" }
+        "alpinejs": { "test": {}, "name": "alpinejs" }
       }
     },
     "minimizer": [

@@ -1,16 +1,18 @@
-function getComponent() {
-    const flatpickr = require('flatpickr').default;
-  return import('lodash-es')
-    .then(({ default: _ }) => {
+// Initliase a flatpickr datepicker object
+
+async function initFlatpickr() {
+    try {
+        const flatpickr = await require('flatpickr').default;
         const fpOptions = {
             altInput: true,
             altFormat: 'd-M-y',
-        }
-        return flatpickr('input[tag=fp-date]', fpOptions)
-    })
-    .catch((error) => 'An error occurred while loading the component')
+        };
+        return flatpickr('input[tag=fp-date]', fpOptions);
+    } catch (error) {
+        return 'An error occurred while loading the component';
+    }
 }
 
-getComponent().then((component) => {
-  document.body.appendChild(component)
+initFlatpickr().then((component) => {
+    document.addEventListener('DOMContentLoaded', component);
 })

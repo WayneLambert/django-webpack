@@ -9,7 +9,7 @@
 {% endblock additional_scripts %}
 
 {% block additional_styles %}
-  {% render_bundle 'appointments' 'css' %}
+  {% render_bundle 'appointments' 'css' is_preload=True %}
 {% endblock additional_styles %}
 
 {% block content %}
@@ -20,7 +20,7 @@
       <div class="col-sm-2">
         <div id="div_id_form-reg_date" class="mb-3">
           <label for="id_form-reg_date" class="form-label requiredField">
-              Registration Date<span class="asteriskField">*</span>
+              Appointment Date<span class="asteriskField">*</span>
           </label>
             <input
               type="text" name="form-reg_date" value="2017-11-15"
