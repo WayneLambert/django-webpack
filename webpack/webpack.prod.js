@@ -2,10 +2,7 @@ const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
-const glob = require('glob')
 const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
-
-const SRC = path.join(__dirname, '..')
 
 const production = {
   name: 'Production Config',
@@ -82,7 +79,7 @@ console.log(`The merged config for ${production.mode} mode is as follows:\n`)
 console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
 
 const fs = require('fs')
-const file = path.resolve(SRC, 'webpack/setup/config.json')
+const file = path.resolve('./webpack/setup/config.json')
 fs.writeFile(file, (data = JSON.stringify(mergedConfig)), function (err) {
   if (err) {
     return console.log(err)

@@ -1,8 +1,9 @@
 {
+  "context": "/Users/wayne-lambert/dev/django-webpack/src",
   "entry": {
-    "index": "./webpack/index.ts",
-    "vendor": "./webpack/assets/scripts/vendor.js",
-    "circle": "./webpack/assets/scripts/circle.ts"
+    "index": { "import": "./webpack/assets/entries/index.ts" },
+    "flatpickr": { "import": "./webpack/assets/entries/flatpickr.ts" },
+    "circle": { "import": "./webpack/assets/entries/circle.ts" }
   },
   "output": {
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",

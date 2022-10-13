@@ -11,7 +11,6 @@
     <title>Django Webpack{% block title %}{% endblock title %}</title>
     <!-- Base JS -->
     {% render_bundle 'index' 'js' attrs="defer" %}
-    {% render_bundle 'vendor' 'js' attrs="defer" %}
 
     <!-- Child JS -->{% block additional_scripts %}{% endblock additional_scripts %}
     <!-- Base CSS -->

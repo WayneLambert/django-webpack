@@ -191,7 +191,7 @@ LOGGING = {
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack/setup/stats.json'),
+        'STATS_FILE': Path(BASE_DIR / 'webpack/setup/stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
         'SKIP_COMMON_CHUNKS': True,

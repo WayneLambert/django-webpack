@@ -11,10 +11,10 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/index.js",
       "publicPath": "/static/bundles/js/index.js"
     },
-    "js/vendor.js": {
-      "name": "js/vendor.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor.js",
-      "publicPath": "/static/bundles/js/vendor.js"
+    "js/flatpickr.js": {
+      "name": "js/flatpickr.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
+      "publicPath": "/static/bundles/js/flatpickr.js"
     },
     "js/circle.js": {
       "name": "js/circle.js",
@@ -26,40 +26,20 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
       "publicPath": "/static/bundles/js/runtime.js"
     },
-    "js/npm.lodash-es.js": {
-      "name": "js/npm.lodash-es.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/npm.lodash-es.js",
-      "publicPath": "/static/bundles/js/npm.lodash-es.js"
+    "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js": {
+      "name": "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
+      "publicPath": "/static/bundles/js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js"
     },
-    "js/npm.popperjs.js": {
-      "name": "js/npm.popperjs.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/npm.popperjs.js",
-      "publicPath": "/static/bundles/js/npm.popperjs.js"
+    "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js": {
+      "name": "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
+      "publicPath": "/static/bundles/js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js"
     },
-    "css/vendor-node_modules_flatpickr_dist_themes_light_css.css": {
-      "name": "css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
-      "publicPath": "/static/bundles/css/vendor-node_modules_flatpickr_dist_themes_light_css.css"
-    },
-    "js/npm.htmx.org.js": {
-      "name": "js/npm.htmx.org.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/npm.htmx.org.js",
-      "publicPath": "/static/bundles/js/npm.htmx.org.js"
-    },
-    "js/npm.bootstrap.js": {
-      "name": "js/npm.bootstrap.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/npm.bootstrap.js",
-      "publicPath": "/static/bundles/js/npm.bootstrap.js"
-    },
-    "js/npm.alpinejs.js": {
-      "name": "js/npm.alpinejs.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/npm.alpinejs.js",
-      "publicPath": "/static/bundles/js/npm.alpinejs.js"
-    },
-    "js/webpack_assets_scripts_circle_ts.js": {
-      "name": "js/webpack_assets_scripts_circle_ts.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/webpack_assets_scripts_circle_ts.js",
-      "publicPath": "/static/bundles/js/webpack_assets_scripts_circle_ts.js"
+    "js/vendor-node_modules_lodash_lodash_js.js": {
+      "name": "js/vendor-node_modules_lodash_lodash_js.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-node_modules_lodash_lodash_js.js",
+      "publicPath": "/static/bundles/js/vendor-node_modules_lodash_lodash_js.js"
     },
     "images/header.jpg": {
       "name": "images/header.jpg",
@@ -75,24 +55,17 @@
   "chunks": {
     "index": [
       "js/runtime.js",
-      "js/npm.lodash-es.js",
-      "css/vendor-node_modules_flatpickr_dist_themes_light_css.css",
-      "js/webpack_assets_scripts_circle_ts.js",
+      "js/vendor-node_modules_alpinejs_dist_module_esm_js-node_modules_htmx_org_dist_htmx_min_js.js",
       "css/index.css",
       "js/index.js"
     ],
-    "vendor": [
+    "flatpickr": [
       "js/runtime.js",
-      "js/npm.popperjs.js",
-      "js/npm.htmx.org.js",
-      "js/npm.bootstrap.js",
-      "js/npm.alpinejs.js",
-      "js/vendor.js"
+      "js/vendor-node_modules_flatpickr_dist_esm_index_js-node_modules_flatpickr_dist_themes_light_css.js",
+      "js/flatpickr.js"
     ],
     "circle": [
       "js/runtime.js",
-      "js/npm.lodash-es.js",
-      "js/webpack_assets_scripts_circle_ts.js",
       "js/circle.js"
     ]
   },

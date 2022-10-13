@@ -1,13 +1,15 @@
 {% extends '_base.html' %}
 
+{% load render_bundle from webpack_loader %}
+
 {% block title %}{{ block.super }} | Flatpickr{% endblock title %}
 
 {% block additional_scripts %}
-
+  {% render_bundle 'flatpickr' 'js' attrs="defer" %}
 {% endblock additional_scripts %}
 
 {% block additional_styles %}
-
+  {% render_bundle 'flatpickr' 'css' %}
 {% endblock additional_styles %}
 
 {% block content %}

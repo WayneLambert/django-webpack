@@ -4,18 +4,23 @@ const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const BundleTracker = require('webpack-bundle-tracker')
 const WebpackShellPluginNext = require('webpack-shell-plugin-next')
-const { log } = require('console')
-
-const SRC = path.resolve(__dirname, '..')
 
 module.exports = {
+  // Resolve paths according to a context of the project's root dir ('src')
+  context: path.resolve(__dirname, '..'),
   entry: {
-    index: './webpack/index.ts',
-    vendor: './webpack/assets/scripts/vendor.js',
-    circle: './webpack/assets/scripts/circle.ts',
+    index: {
+      import: './webpack/assets/entries/index.ts',
+    },
+    flatpickr: {
+      import: './webpack/assets/entries/flatpickr.ts',
+    },
+    circle: {
+      import: './webpack/assets/entries/circle.ts',
+    },
   },
   output: {
-    path: path.resolve(SRC, 'static/bundles'),
+    path: path.resolve('./static/bundles'),
     publicPath: '/static/bundles/',
     clean: true,
   },
@@ -35,7 +40,7 @@ module.exports = {
         vendor: {
           test: /[\\\/]node_modules[\\\/]/,
           name(module) {
-            if (module.context !== SRC) {
+            if (module.context !== module.context) {
               let packageName = module.context.match(/[\\\/]node_modules[\\\/](.*?)([\\\/]|$)/)[1]
               return `npm.${packageName.replace('@', '')}`
             }
@@ -69,8 +74,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(SRC, 'webpack/assets/images'),
-          to: path.resolve(SRC, 'static/bundles/images'),
+          from: path.resolve('./webpack/assets/images'),
+          to: path.resolve('./static/bundles/images'),
         },
       ],
     }),
@@ -87,7 +92,7 @@ module.exports = {
       },
     }),
     new BundleTracker({
-      filename: path.resolve(SRC, 'webpack/setup/stats.json'),
+      filename: path.resolve('./webpack/setup/stats.json'),
     }),
   ],
   stats: {
@@ -95,6 +100,5 @@ module.exports = {
     errorStack: false,
     modules: true,
     warnings: true,
-    // assets: false,
   },
 }

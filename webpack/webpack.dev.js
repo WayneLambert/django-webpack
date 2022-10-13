@@ -3,8 +3,6 @@ const path = require('path')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const SRC = path.join(__dirname, '..')
-
 const development = {
   name: 'Development Config',
   mode: 'development',
@@ -68,7 +66,7 @@ console.log(`The merged config for ${development.mode} mode is as follows:\n`)
 console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
 
 const fs = require('fs')
-const file = path.resolve(SRC, 'webpack/setup/config.json')
+const file = path.resolve('./webpack/setup/config.json')
 fs.writeFile(file, (data = JSON.stringify(mergedConfig)), function (err) {
   if (err) {
     return console.log(err)
