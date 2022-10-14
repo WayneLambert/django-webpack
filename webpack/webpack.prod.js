@@ -1,7 +1,8 @@
 const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+
+const reportConfig = require('./funcs/output.js').reportConfig
 
 const production = {
   name: 'Production Config',
@@ -66,12 +67,4 @@ const mergedConfig = merge(base, production)
 module.exports = mergedConfig
 
 console.log(`The merged config for ${production.mode} mode is as follows:\n`)
-console.dir(mergedConfig, { depth: null, colors: true }) + console.log('\r')
-
-const fs = require('fs')
-const file = path.resolve('./webpack/setup/config.json')
-fs.writeFile(file, (data = JSON.stringify(mergedConfig)), function (err) {
-  if (err) {
-    return console.log(err)
-  }
-})
+reportConfig(mergedConfig)

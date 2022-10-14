@@ -11,13 +11,13 @@ module.exports = {
   context: path.resolve(__dirname, '..'),
   entry: {
     base: {
-      import: './webpack/assets/entries/base.ts',
+      import: './webpack/entries/base.ts',
     },
     appointments: {
-      import: './webpack/assets/entries/appointments.ts',
+      import: './webpack/entries/appointments.ts',
     },
     circle: {
-      import: './webpack/assets/entries/circle.ts',
+      import: './webpack/entries/circle.ts',
     },
   },
   output: {
@@ -70,11 +70,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.css$/i,
-        exclude: /\.module\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(scss)$/i,

@@ -1,9 +1,9 @@
 {
   "context": "/Users/wayne-lambert/dev/django-webpack/src",
   "entry": {
-    "base": { "import": "./webpack/assets/entries/base.ts" },
-    "appointments": { "import": "./webpack/assets/entries/appointments.ts" },
-    "circle": { "import": "./webpack/assets/entries/circle.ts" }
+    "base": { "import": "./webpack/entries/base.ts" },
+    "appointments": { "import": "./webpack/entries/appointments.ts" },
+    "circle": { "import": "./webpack/entries/circle.ts" }
   },
   "output": {
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
@@ -43,14 +43,6 @@
       { "test": {}, "exclude": {}, "use": { "loader": "babel-loader" } },
       {
         "test": {},
-        "exclude": {},
-        "use": [
-          "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
-          "css-loader"
-        ]
-      },
-      {
-        "test": {},
         "use": [
           "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
           "css-loader",
@@ -61,7 +53,7 @@
         "test": {},
         "include": {},
         "use": [
-          "style-loader",
+          "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
           {
             "loader": "css-loader",
             "options": {

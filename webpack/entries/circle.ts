@@ -5,7 +5,7 @@ async function calculateAreaOfCircle() {
     const { capitalize } = await import('lodash-es')
     const btnCalculateArea = document.getElementById('btn-area-of-circle')
     btnCalculateArea!.addEventListener('click', () => {
-      const circle = require('../examples/circleArea.ts')
+      const circle = require('../assets/scripts/circleArea.ts')
       const radiusEl = document.getElementById('radius-of-circle') as HTMLInputElement
       if (radiusEl != null) {
         const radius = parseInt(radiusEl.value)
