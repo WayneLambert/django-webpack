@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  web:
+    image: ${COMPOSE_PROJECT_NAME}_web
+    container_name: ${COMPOSE_PROJECT_NAME}_web
+    build:
+      dockerfile: ./docker/dev/web/Dockerfile
+      context: .
+    restart: always
+    tty: true
+    env_file:
+      - .env
+      - dev.env
+    volumes:
+      - .:/code
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+      - "${DEBUG_PORT}:${DEBUG_PORT}"
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:${WEB_PORT}"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

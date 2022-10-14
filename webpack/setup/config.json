@@ -9,7 +9,7 @@
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
     "publicPath": "/static/bundles/",
     "clean": true,
-    "filename": "js/[name].js"
+    "filename": "js/[name].[contenthash:12].js"
   },
   "resolve": { "extensions": [".ts", "..."] },
   "optimization": {
@@ -56,19 +56,24 @@
           "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
           {
             "loader": "css-loader",
-            "options": {
-              "modules": { "localIdentName": "[local]--[md4:hash:7]" }
-            }
+            "options": { "modules": { "localIdentName": "[hash:base64]" } }
           }
         ]
       },
       {
         "test": {},
-        "use": ["file-loader", "image-webpack-loader"],
+        "use": [
+          {
+            "loader": "image-webpack-loader",
+            "options": {
+              "mozjpeg": { "quality": 75 },
+              "pngquant": { "quality": [0.75, 0.9], "speed": 4 }
+            }
+          }
+        ],
         "type": "asset",
-        "exclude": [{}],
         "parser": { "dataUrlCondition": { "maxSize": 10240 } },
-        "generator": { "filename": "images/[name][ext]" }
+        "generator": { "filename": "images/[name].[contenthash:12][ext]" }
       }
     ]
   },
@@ -132,10 +137,10 @@
     {
       "_sortedModulesCache": {},
       "options": {
-        "filename": "css/[name].css",
+        "filename": "css/[name].[contenthash].css",
         "ignoreOrder": false,
         "runtime": true,
-        "chunkFilename": "css/[name].css"
+        "chunkFilename": "css/[name].[contenthash].css"
       },
       "runtimeOptions": { "linkType": "text/css" }
     }
@@ -152,7 +157,7 @@
     "groupModulesByAttributes": true,
     "chunks": false
   },
-  "name": "Development Config",
-  "mode": "development",
-  "devtool": "eval-source-map"
+  "name": "Production Config",
+  "mode": "production",
+  "devtool": "source-map"
 }
