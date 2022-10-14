@@ -1,15 +1,15 @@
 {
   "status": "done",
   "assets": {
-    "css/index.css": {
-      "name": "css/index.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/index.css",
-      "publicPath": "/static/bundles/css/index.css"
+    "css/base.css": {
+      "name": "css/base.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.css",
+      "publicPath": "/static/bundles/css/base.css"
     },
-    "js/index.js": {
-      "name": "js/index.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/index.js",
-      "publicPath": "/static/bundles/js/index.js"
+    "js/base.js": {
+      "name": "js/base.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.js",
+      "publicPath": "/static/bundles/js/base.js"
     },
     "js/appointments.js": {
       "name": "js/appointments.js",
@@ -63,13 +63,13 @@
     }
   },
   "chunks": {
-    "index": [
+    "base": [
       "js/runtime.js",
       "js/htmx.js",
       "js/alpinejs.js",
       "css/vendors-node_modules_flatpickr_dist_themes_light_css.css",
-      "css/index.css",
-      "js/index.js"
+      "css/base.css",
+      "js/base.js"
     ],
     "appointments": [
       "js/runtime.js",

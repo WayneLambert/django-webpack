@@ -2,7 +2,6 @@ const base = require('./webpack.base')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
-const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 
 const production = {
   name: 'Production Config',
@@ -13,11 +12,6 @@ const production = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/i,
-        exclude: /\.module\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
       {
         test: /\.css$/i,
         include: /\.module\.css$/i,
@@ -34,11 +28,21 @@ const production = {
         ],
       },
       {
-        test: /\.(scss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
+        use: [
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                quality: 75,
+              },
+              pngquant: {
+                quality: [0.75, 0.9],
+                speed: 4,
+              },
+            },
+          },
+        ],
         type: 'asset',
         parser: {
           dataUrlCondition: {
@@ -48,20 +52,6 @@ const production = {
         generator: {
           filename: 'images/[name].[contenthash:12][ext]',
         },
-        use: [
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                quality: 60,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-            },
-          },
-        ],
       },
     ],
   },

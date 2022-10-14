@@ -36,7 +36,6 @@
         "css-loader": "^6.7.1",
         "css-minimizer-webpack-plugin": "^4.1.0",
         "file-loader": "^6.2.0",
-        "html-loader": "^4.2.0",
         "image-webpack-loader": "^8.1.0",
         "mini-css-extract-plugin": "^2.6.1",
         "postcss-loader": "^7.0.1",
@@ -60,10 +59,5 @@
         "flatpickr": "^4.6.13",
         "htmx.org": "^1.8.2",
         "lodash-es": "^4.17.21"
-    },
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ]
     }
 }

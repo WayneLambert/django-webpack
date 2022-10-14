@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Django Webpack{% block title %}{% endblock title %}</title>
     <!-- Base JS -->
-    {% render_bundle 'index' 'js' attrs="defer" %}
+    {% render_bundle 'base' 'js' attrs="defer" %}
 
     <!-- Child JS -->{% block additional_scripts %}{% endblock additional_scripts %}
     <!-- Base CSS -->
-    {% render_bundle 'index' 'css' %}
+    {% render_bundle 'base' 'css' %}
     <!-- Child CSS -->{% block additional_styles %}{% endblock additional_styles %}
   </head>
   <body>

@@ -3,14 +3,15 @@ const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const BundleTracker = require('webpack-bundle-tracker')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 
 module.exports = {
   // Resolve paths according to a context of the project's root dir ('src')
   context: path.resolve(__dirname, '..'),
   entry: {
-    index: {
-      import: './webpack/assets/entries/index.ts',
+    base: {
+      import: './webpack/assets/entries/base.ts',
     },
     appointments: {
       import: './webpack/assets/entries/appointments.ts',
@@ -64,16 +65,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        use: 'html-loader',
-        exclude: '/node_modules/',
-      },
-      {
         test: /\.(js|ts)$/i,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/i,
+        exclude: /\.module\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.(scss)$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -103,9 +108,15 @@ module.exports = {
     }),
   ],
   stats: {
-    errorDetails: false,
-    errorStack: false,
+    errorDetails: true,
+    errorStack: true,
     modules: true,
     warnings: true,
+    assets: false,
+    builtAt: false,
+    moduleAssets: true,
+    nestedModules: true,
+    groupModulesByAttributes: true,
+    chunks: false,
   },
 }

@@ -14,11 +14,6 @@ const development = {
     rules: [
       {
         test: /\.css$/i,
-        exclude: /\.module\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.css$/i,
         include: /\.module\.css$/i,
         use: [
           'style-loader',
@@ -31,10 +26,6 @@ const development = {
             },
           },
         ],
-      },
-      {
-        test: /\.(scss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/i,
