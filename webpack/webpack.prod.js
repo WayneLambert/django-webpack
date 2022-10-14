@@ -66,5 +66,4 @@ const production = {
 const mergedConfig = merge(base, production)
 module.exports = mergedConfig
 
-console.log(`The merged config for ${production.mode} mode is as follows:\n`)
-reportConfig(mergedConfig)
+reportConfig(mergedConfig, production.mode)

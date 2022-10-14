@@ -1,6 +1,7 @@
 const path = require('path')
 
-exports.reportConfig = (config) => {
+exports.reportConfig = (config, mode) => {
+  console.log(`The merged config for ${mode} mode is as follows:\n`)
   console.dir(config, { depth: null, colors: true }) + console.log('\r')
 
   const fs = require('fs')
