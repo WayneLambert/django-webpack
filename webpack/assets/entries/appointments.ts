@@ -1,4 +1,4 @@
-// Initliase a flatpickr datepicker object
+// Initialise a flatpickr datepicker object
 
 async function initFlatpickr() {
     try {
