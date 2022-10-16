@@ -9,24 +9,25 @@
 {% endblock additional_scripts %}
 
 {% block additional_styles %}
-  {% render_bundle 'appointments' 'css' is_preload=True %}
+  {% comment %} {% render_bundle 'appointments' 'css' %} {% endcomment %}
 {% endblock additional_styles %}
 
 {% block content %}
-  <div class="container p-2 mx-auto">
-    <!-- Flatpickr Test Element -->
-    <div class="pt-3">
-      <h5>Flatpickr Test Element</h5>
-      <div class="col-sm-2">
-        <div id="div_id_form-reg_date" class="mb-3">
-          <label for="id_form-reg_date" class="form-label requiredField">
+  <div class="card">
+    <div class="card-body bg-light">
+      <div class="container p-2 mx-auto">
+        <h5>Flatpickr Element</h5>
+        <div class="col-sm-2">
+          <div id="div_id_form-reg_date" class="mb-3">
+            <label for="id_form-reg_date" class="form-label requiredField">
               Appointment Date<span class="asteriskField">*</span>
-          </label>
+            </label>
             <input
-              type="text" name="form-reg_date" value="2017-11-15"
+              type="text" name="form-reg_date" value="2022-10-15"
               class="js-flatpickr form-control form-control-hover-light form-select-hover-light sitedateinput"
               tag="fp-date" placeholder="Select Date..." required="" id="id_form-reg_date"
             />
+          </div>
         </div>
       </div>
     </div>

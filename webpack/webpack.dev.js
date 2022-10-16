@@ -16,6 +16,7 @@ const development = {
       {
         test: /\.css$/i,
         include: /\.module\.css$/i,
+        type: 'asset/resource',
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -47,6 +48,7 @@ const development = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
+      linkType: 'text/css',
     }),
   ],
 }

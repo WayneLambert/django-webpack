@@ -1,6 +1,51 @@
 {
   "status": "done",
   "assets": {
+    "css/base.css": {
+      "name": "css/base.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.css",
+      "publicPath": "/static/bundles/css/base.css"
+    },
+    "js/base.js": {
+      "name": "js/base.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.js",
+      "publicPath": "/static/bundles/js/base.js"
+    },
+    "js/appointments.js": {
+      "name": "js/appointments.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.js",
+      "publicPath": "/static/bundles/js/appointments.js"
+    },
+    "js/circle.js": {
+      "name": "js/circle.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.js",
+      "publicPath": "/static/bundles/js/circle.js"
+    },
+    "js/runtime.js": {
+      "name": "js/runtime.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
+      "publicPath": "/static/bundles/js/runtime.js"
+    },
+    "js/lodash.js": {
+      "name": "js/lodash.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.js",
+      "publicPath": "/static/bundles/js/lodash.js"
+    },
+    "js/htmx.js": {
+      "name": "js/htmx.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.js",
+      "publicPath": "/static/bundles/js/htmx.js"
+    },
+    "js/alpinejs.js": {
+      "name": "js/alpinejs.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.js",
+      "publicPath": "/static/bundles/js/alpinejs.js"
+    },
+    "js/vendors-node_modules_flatpickr_dist_esm_index_js.js": {
+      "name": "js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
+      "publicPath": "/static/bundles/js/vendors-node_modules_flatpickr_dist_esm_index_js.js"
+    },
     "images/header.jpg": {
       "name": "images/header.jpg",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/header.jpg",
@@ -10,148 +55,24 @@
       "name": "images/logo.png",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/logo.png",
       "publicPath": "/static/bundles/images/logo.png"
-    },
-    "css/base.4bdcceaafd5462300604.css": {
-      "name": "css/base.4bdcceaafd5462300604.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.4bdcceaafd5462300604.css",
-      "publicPath": "/static/bundles/css/base.4bdcceaafd5462300604.css"
-    },
-    "js/base.e7ee45334708.js": {
-      "name": "js/base.e7ee45334708.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.e7ee45334708.js",
-      "publicPath": "/static/bundles/js/base.e7ee45334708.js"
-    },
-    "js/appointments.04f0a3a7dcef.js": {
-      "name": "js/appointments.04f0a3a7dcef.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.04f0a3a7dcef.js",
-      "publicPath": "/static/bundles/js/appointments.04f0a3a7dcef.js"
-    },
-    "js/circle.ca75e6e22cc0.js": {
-      "name": "js/circle.ca75e6e22cc0.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.ca75e6e22cc0.js",
-      "publicPath": "/static/bundles/js/circle.ca75e6e22cc0.js"
-    },
-    "js/runtime.f10e1997f3f5.js": {
-      "name": "js/runtime.f10e1997f3f5.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.f10e1997f3f5.js",
-      "publicPath": "/static/bundles/js/runtime.f10e1997f3f5.js"
-    },
-    "js/lodash.7573298e3b87.js": {
-      "name": "js/lodash.7573298e3b87.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.7573298e3b87.js",
-      "publicPath": "/static/bundles/js/lodash.7573298e3b87.js"
-    },
-    "js/htmx.9ad499fc9575.js": {
-      "name": "js/htmx.9ad499fc9575.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.9ad499fc9575.js",
-      "publicPath": "/static/bundles/js/htmx.9ad499fc9575.js"
-    },
-    "js/alpinejs.00c1669d58ae.js": {
-      "name": "js/alpinejs.00c1669d58ae.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.00c1669d58ae.js",
-      "publicPath": "/static/bundles/js/alpinejs.00c1669d58ae.js"
-    },
-    "js/236.1bf8d932bf00.js": {
-      "name": "js/236.1bf8d932bf00.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/236.1bf8d932bf00.js",
-      "publicPath": "/static/bundles/js/236.1bf8d932bf00.js"
-    },
-    "js/527.150aaa48dcaf.js": {
-      "name": "js/527.150aaa48dcaf.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/527.150aaa48dcaf.js",
-      "publicPath": "/static/bundles/js/527.150aaa48dcaf.js"
-    },
-    "js/825.15b7a49588b4.js": {
-      "name": "js/825.15b7a49588b4.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/825.15b7a49588b4.js",
-      "publicPath": "/static/bundles/js/825.15b7a49588b4.js"
-    },
-    "css/194.b4f4f606a7aef824657c.css": {
-      "name": "css/194.b4f4f606a7aef824657c.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/194.b4f4f606a7aef824657c.css",
-      "publicPath": "/static/bundles/css/194.b4f4f606a7aef824657c.css"
-    },
-    "css/base.4bdcceaafd5462300604.css.map": {
-      "name": "css/base.4bdcceaafd5462300604.css.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.4bdcceaafd5462300604.css.map",
-      "publicPath": "/static/bundles/css/base.4bdcceaafd5462300604.css.map"
-    },
-    "js/base.e7ee45334708.js.map": {
-      "name": "js/base.e7ee45334708.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.e7ee45334708.js.map",
-      "publicPath": "/static/bundles/js/base.e7ee45334708.js.map"
-    },
-    "js/appointments.04f0a3a7dcef.js.map": {
-      "name": "js/appointments.04f0a3a7dcef.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.04f0a3a7dcef.js.map",
-      "publicPath": "/static/bundles/js/appointments.04f0a3a7dcef.js.map"
-    },
-    "js/circle.ca75e6e22cc0.js.map": {
-      "name": "js/circle.ca75e6e22cc0.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.ca75e6e22cc0.js.map",
-      "publicPath": "/static/bundles/js/circle.ca75e6e22cc0.js.map"
-    },
-    "js/runtime.f10e1997f3f5.js.map": {
-      "name": "js/runtime.f10e1997f3f5.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.f10e1997f3f5.js.map",
-      "publicPath": "/static/bundles/js/runtime.f10e1997f3f5.js.map"
-    },
-    "js/lodash.7573298e3b87.js.map": {
-      "name": "js/lodash.7573298e3b87.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.7573298e3b87.js.map",
-      "publicPath": "/static/bundles/js/lodash.7573298e3b87.js.map"
-    },
-    "js/htmx.9ad499fc9575.js.map": {
-      "name": "js/htmx.9ad499fc9575.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.9ad499fc9575.js.map",
-      "publicPath": "/static/bundles/js/htmx.9ad499fc9575.js.map"
-    },
-    "js/alpinejs.00c1669d58ae.js.map": {
-      "name": "js/alpinejs.00c1669d58ae.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.00c1669d58ae.js.map",
-      "publicPath": "/static/bundles/js/alpinejs.00c1669d58ae.js.map"
-    },
-    "js/236.1bf8d932bf00.js.map": {
-      "name": "js/236.1bf8d932bf00.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/236.1bf8d932bf00.js.map",
-      "publicPath": "/static/bundles/js/236.1bf8d932bf00.js.map"
-    },
-    "js/527.150aaa48dcaf.js.map": {
-      "name": "js/527.150aaa48dcaf.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/527.150aaa48dcaf.js.map",
-      "publicPath": "/static/bundles/js/527.150aaa48dcaf.js.map"
-    },
-    "js/825.15b7a49588b4.js.map": {
-      "name": "js/825.15b7a49588b4.js.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/825.15b7a49588b4.js.map",
-      "publicPath": "/static/bundles/js/825.15b7a49588b4.js.map"
-    },
-    "css/194.b4f4f606a7aef824657c.css.map": {
-      "name": "css/194.b4f4f606a7aef824657c.css.map",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/194.b4f4f606a7aef824657c.css.map",
-      "publicPath": "/static/bundles/css/194.b4f4f606a7aef824657c.css.map"
     }
   },
   "chunks": {
     "base": [
-      "js/runtime.f10e1997f3f5.js",
-      "js/htmx.9ad499fc9575.js",
-      "js/alpinejs.00c1669d58ae.js",
-      "css/194.b4f4f606a7aef824657c.css",
-      "css/base.4bdcceaafd5462300604.css",
-      "js/base.e7ee45334708.js"
+      "js/runtime.js",
+      "js/htmx.js",
+      "js/alpinejs.js",
+      "css/base.css",
+      "js/base.js"
     ],
     "appointments": [
-      "js/runtime.f10e1997f3f5.js",
-      "js/236.1bf8d932bf00.js",
-      "js/527.150aaa48dcaf.js",
-      "js/appointments.04f0a3a7dcef.js"
+      "js/runtime.js",
+      "js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
+      "js/appointments.js"
     ],
     "circle": [
-      "js/runtime.f10e1997f3f5.js",
-      "js/236.1bf8d932bf00.js",
-      "js/825.15b7a49588b4.js",
-      "js/circle.ca75e6e22cc0.js"
+      "js/runtime.js",
+      "js/circle.js"
     ]
   },
   "publicPath": "/static/bundles/"

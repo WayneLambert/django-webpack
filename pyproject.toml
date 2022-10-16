@@ -13,6 +13,7 @@ django-htmx = "^1.12.2"
 rich = "12.6.0"
 httpx = "0.23"
 django-webpack-loader = "1.6.0"
+django-ninja = "^0.19.1"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "3.7.0"

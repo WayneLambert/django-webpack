@@ -9,9 +9,9 @@
 {% endblock additional_scripts %}
 
 {% block content %}
-  <div class="container p-2 mx-auto">
-    <div class="mt-2">
-      <div class="form-group row">
+  <div class="card">
+    <div class="card-body bg-light">
+      <div class="form-group row pt-3">
         <label class="col-2 col-form-label"><span class="float-end fw-bold">Radius:</span></label>
         <div class="col-1">
           <input type="text" id="radius-of-circle" class="form-control" />
@@ -21,7 +21,10 @@
         </div>
       </div>
       <div class="row">
-        <div id="area-of-circle" class="pt-3"></div>
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div id="area-of-circle" class="pt-3"></div>
+        </div>
       </div>
     </div>
   </div>

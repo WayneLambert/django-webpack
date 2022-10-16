@@ -16,19 +16,22 @@
           </tr>
         </thead>
         <tbody>
-          {% for task in tasks %}
-            <tr>
-              <td class="cell">{{ task.pk }}</td>
-              <td class="cell">{{ task.title }}</td>
-              <td class="cell">{{ task.desc }}</td>
-              <td class="cell">{{ task.is_priority }}</td>
-              <td class="cell">{{ task.created_by.get_full_name }}</td>
-              <td class="cell">{{ task.created_date|date:'d-M-y H:i' }}</td>
-              <td class="cell">{{ task.updated_date|date:'d-M-y H:i' }}</td>
-            </tr>
-          {% endfor %}
+          <tr x-data="id_tasks_json">
+            <template x-for="task in id_tasks_json" :key="task.id">
+              <td x-text="task.title"></td>
+              <td x-text="task.desc"></td>
+              <td x-text="task.is_priority"></td>
+              <td x-text="task.created_by"></td>
+              <td x-text="task.created_date"></td>
+              <td x-text="task.updated_date"></td>
+            </template>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 {% endblock content %}
+
+{% block additional_scripts %}
+  {{ tasks|json_script:"id_tasks_json" }}
+{% endblock additional_scripts %}

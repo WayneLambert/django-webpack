@@ -1,9 +1,10 @@
-from django.core import serializers
+import json
+
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import TemplateView
 
-from .models import Task
+from core import endpoints
 
 
 def home(request):
@@ -45,7 +46,10 @@ def alpine(request):
     return render(request, "alpine.html", {})
 
 
-class TaskListView(ListView):
-    model = Task
-    template_name = 'tasks.html'
-    context_object_name = 'tasks'
+class TaskListView(TemplateView):
+    template_name = 'core/tasks.html'
+
+    def get_context_data(self, **kwargs) -> dict:
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = json.dumps(endpoints.tasks(self.request))
+        return context

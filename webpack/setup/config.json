@@ -9,7 +9,7 @@
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
     "publicPath": "/static/bundles/",
     "clean": true,
-    "filename": "js/[name].[contenthash:12].js"
+    "filename": "js/[name].js"
   },
   "resolve": { "extensions": [".ts", "..."] },
   "optimization": {
@@ -52,28 +52,24 @@
       {
         "test": {},
         "include": {},
+        "type": "asset/resource",
         "use": [
           "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
           {
             "loader": "css-loader",
-            "options": { "modules": { "localIdentName": "[hash:base64]" } }
+            "options": {
+              "modules": { "localIdentName": "[local]--[md4:hash:7]" }
+            }
           }
         ]
       },
       {
         "test": {},
-        "use": [
-          {
-            "loader": "image-webpack-loader",
-            "options": {
-              "mozjpeg": { "quality": 75 },
-              "pngquant": { "quality": [0.75, 0.9], "speed": 4 }
-            }
-          }
-        ],
+        "use": ["file-loader", "image-webpack-loader"],
         "type": "asset",
+        "exclude": [{}],
         "parser": { "dataUrlCondition": { "maxSize": 10240 } },
-        "generator": { "filename": "images/[name].[contenthash:12][ext]" }
+        "generator": { "filename": "images/[name][ext]" }
       }
     ]
   },
@@ -137,10 +133,11 @@
     {
       "_sortedModulesCache": {},
       "options": {
-        "filename": "css/[name].[contenthash].css",
+        "filename": "css/[name].css",
         "ignoreOrder": false,
         "runtime": true,
-        "chunkFilename": "css/[name].[contenthash].css"
+        "linkType": "text/css",
+        "chunkFilename": "css/[name].css"
       },
       "runtimeOptions": { "linkType": "text/css" }
     }
@@ -157,7 +154,7 @@
     "groupModulesByAttributes": true,
     "chunks": false
   },
-  "name": "Production Config",
-  "mode": "production",
-  "devtool": "source-map"
+  "name": "Development Config",
+  "mode": "development",
+  "devtool": "eval-source-map"
 }
