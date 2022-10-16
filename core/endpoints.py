@@ -23,8 +23,9 @@ def tasks(request):
             'title': task.title,
             'desc': task.desc,
             'is_priority': task.is_priority,
-            'start': task.created_date.strftime('%Y-%m-%dT%H:%M:%S'),
-            'end': task.updated_date.strftime('%Y-%m-%dT%H:%M:%S'),
+            'created_by': task.created_by.get_full_name(),
+            'created_date': task.created_date.strftime('%d-%b-%Y %H:%M'),
+            'updated_date': task.updated_date.strftime('%d-%b-%Y %H:%M'),
         }
         for task in tasks
     ]

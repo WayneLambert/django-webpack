@@ -15,17 +15,18 @@
             <th>Updated Date/Time</th>
           </tr>
         </thead>
-        <tbody>
-          <tr x-data="id_tasks_json">
-            <template x-for="task in id_tasks_json" :key="task.id">
+        <tbody x-data="{{ tasks }}">
+          <template x-for="task in tasks" :key="task.id">
+            <tr>
+              <td x-text="task.id"></td>
               <td x-text="task.title"></td>
               <td x-text="task.desc"></td>
               <td x-text="task.is_priority"></td>
               <td x-text="task.created_by"></td>
               <td x-text="task.created_date"></td>
               <td x-text="task.updated_date"></td>
-            </template>
-          </tr>
+            </tr>
+          </template>
         </tbody>
       </table>
     </div>
@@ -33,5 +34,5 @@
 {% endblock content %}
 
 {% block additional_scripts %}
-  {{ tasks|json_script:"id_tasks_json" }}
+  {{ tasks|json_script:"data" }}
 {% endblock additional_scripts %}

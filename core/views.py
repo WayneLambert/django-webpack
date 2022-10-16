@@ -50,6 +50,11 @@ class TaskListView(TemplateView):
     template_name = 'core/tasks.html'
 
     def get_context_data(self, **kwargs) -> dict:
+        """
+        Create normalised JSON for data (i.e. tasks) in order to be
+        in an appropriate format for consumption by Alpinsjs
+        """
         context = super().get_context_data(**kwargs)
-        context['tasks'] = json.dumps(endpoints.tasks(self.request))
+        data = {'tasks': endpoints.tasks(self.request)}
+        context['tasks'] = json.dumps(data)
         return context
