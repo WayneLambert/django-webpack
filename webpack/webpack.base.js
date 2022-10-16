@@ -23,7 +23,7 @@ module.exports = {
   output: {
     path: path.resolve('./static/bundles'),
     publicPath: '/static/bundles/',
-    chunkFilename: 'vendor.[name].js',
+    chunkFilename: 'js/vendor-[name].js',
     clean: true,
   },
   resolve: {

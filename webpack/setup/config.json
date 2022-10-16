@@ -8,7 +8,7 @@
   "output": {
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
     "publicPath": "/static/bundles/",
-    "chunkFilename": "vendor.[name].js",
+    "chunkFilename": "js/vendor-[name].js",
     "clean": true,
     "filename": "js/[name].js"
   },
