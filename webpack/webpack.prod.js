@@ -59,6 +59,7 @@ const production = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
+      linkType: 'text/css',
     }),
   ],
 }

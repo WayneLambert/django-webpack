@@ -16,7 +16,7 @@ const development = {
       {
         test: /\.css$/i,
         include: /node_modules/,
-        // type: 'asset/resource',
+        type: 'asset/resource',
         use: [
           MiniCssExtractPlugin.loader,
           {

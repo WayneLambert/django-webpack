@@ -31,15 +31,15 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
       "publicPath": "/static/bundles/js/runtime.js"
     },
-    "js/vendor-flatpickr.js": {
-      "name": "js/vendor-flatpickr.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-flatpickr.js",
-      "publicPath": "/static/bundles/js/vendor-flatpickr.js"
+    "js/flatpickr.js": {
+      "name": "js/flatpickr.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
+      "publicPath": "/static/bundles/js/flatpickr.js"
     },
-    "js/vendor-lodash.js": {
-      "name": "js/vendor-lodash.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendor-lodash.js",
-      "publicPath": "/static/bundles/js/vendor-lodash.js"
+    "js/lodash.js": {
+      "name": "js/lodash.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.js",
+      "publicPath": "/static/bundles/js/lodash.js"
     },
     "js/htmx.js": {
       "name": "js/htmx.js",
