@@ -1,8 +1,9 @@
 // Initialise a flatpickr datepicker object
+require('../assets/styles/flatpickr.scss')
 
 async function initFlatpickr() {
+  const { default: flatpickr } = await import(/* webpackChunkName: "flatpickr" */ 'flatpickr')
   try {
-    const flatpickr = await require('flatpickr').default
     const fpOptions = {
       altInput: true,
       altFormat: 'd-M-y',

@@ -15,17 +15,12 @@ const development = {
     rules: [
       {
         test: /\.css$/i,
-        include: /\.module\.css$/i,
-        type: 'asset/resource',
+        include: /node_modules/,
+        // type: 'asset/resource',
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[local]--[md4:hash:7]',
-              },
-            },
           },
         ],
       },

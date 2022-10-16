@@ -8,6 +8,7 @@
   "output": {
     "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles",
     "publicPath": "/static/bundles/",
+    "chunkFilename": "vendor.[name].js",
     "clean": true,
     "filename": "js/[name].js"
   },
@@ -52,15 +53,9 @@
       {
         "test": {},
         "include": {},
-        "type": "asset/resource",
         "use": [
           "/Users/wayne-lambert/dev/django-webpack/src/node_modules/mini-css-extract-plugin/dist/loader.js",
-          {
-            "loader": "css-loader",
-            "options": {
-              "modules": { "localIdentName": "[local]--[md4:hash:7]" }
-            }
-          }
+          { "loader": "css-loader" }
         ]
       },
       {

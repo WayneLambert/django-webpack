@@ -11,6 +11,11 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.js",
       "publicPath": "/static/bundles/js/base.js"
     },
+    "css/appointments.css": {
+      "name": "css/appointments.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/appointments.css",
+      "publicPath": "/static/bundles/css/appointments.css"
+    },
     "js/appointments.js": {
       "name": "js/appointments.js",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.js",
@@ -26,10 +31,15 @@
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
       "publicPath": "/static/bundles/js/runtime.js"
     },
-    "js/lodash.js": {
-      "name": "js/lodash.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.js",
-      "publicPath": "/static/bundles/js/lodash.js"
+    "vendor.flatpickr.js": {
+      "name": "vendor.flatpickr.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/vendor.flatpickr.js",
+      "publicPath": "/static/bundles/vendor.flatpickr.js"
+    },
+    "vendor.lodash.js": {
+      "name": "vendor.lodash.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/vendor.lodash.js",
+      "publicPath": "/static/bundles/vendor.lodash.js"
     },
     "js/htmx.js": {
       "name": "js/htmx.js",
@@ -40,11 +50,6 @@
       "name": "js/alpinejs.js",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.js",
       "publicPath": "/static/bundles/js/alpinejs.js"
-    },
-    "js/vendors-node_modules_flatpickr_dist_esm_index_js.js": {
-      "name": "js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
-      "publicPath": "/static/bundles/js/vendors-node_modules_flatpickr_dist_esm_index_js.js"
     },
     "images/header.jpg": {
       "name": "images/header.jpg",
@@ -67,7 +72,7 @@
     ],
     "appointments": [
       "js/runtime.js",
-      "js/vendors-node_modules_flatpickr_dist_esm_index_js.js",
+      "css/appointments.css",
       "js/appointments.js"
     ],
     "circle": [
