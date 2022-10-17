@@ -13,13 +13,10 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set the COLUMNS variable for the terminal's output width
-ENV COLUMNS 135
+ENV COLUMNS 139
 
 # Create and set working directory
 WORKDIR /code
-
-# Install Nodejs and NPM
-RUN apt-get update && apt-get install -y nodejs npm
 
 # Upgrade pip
 RUN pip install --upgrade pip

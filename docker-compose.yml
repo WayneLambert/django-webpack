@@ -1,6 +1,25 @@
 version: "3.8"
 
 services:
+  postgres:
+    image: ${COMPOSE_PROJECT_NAME}_postgres
+    container_name: ${COMPOSE_PROJECT_NAME}_postgres
+    build:
+      context: ./docker/postgres/dev
+    restart: always
+    env_file:
+      - .env
+      - dev.env
+      - postgres.env
+    volumes:
+      - type: volume
+        source: postgres_volume
+        target: /var/lib/postgresql/data/
+    ports:
+      - "5436:5432"
+    networks:
+      - backend
+
   web:
     image: ${COMPOSE_PROJECT_NAME}_web
     container_name: ${COMPOSE_PROJECT_NAME}_web
@@ -12,6 +31,7 @@ services:
     env_file:
       - .env
       - dev.env
+      - postgres.env
     volumes:
       - .:/code
     ports:
@@ -25,3 +45,6 @@ services:
 networks:
   backend:
     driver: bridge
+
+volumes:
+  postgres_volume:
