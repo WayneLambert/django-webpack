@@ -40,7 +40,14 @@
   },
   "module": {
     "rules": [
-      { "test": {}, "exclude": {}, "use": { "loader": "babel-loader" } },
+      {
+        "test": {},
+        "exclude": {},
+        "use": {
+          "loader": "babel-loader",
+          "options": { "configFile": "./webpack/babel.config.json" }
+        }
+      },
       {
         "test": {},
         "use": [
