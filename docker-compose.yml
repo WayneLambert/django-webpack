@@ -2,15 +2,14 @@ version: "3.8"
 
 services:
   postgres:
-    image: ${COMPOSE_PROJECT_NAME}_postgres
-    container_name: ${COMPOSE_PROJECT_NAME}_postgres
+    image: dev_${COMPOSE_PROJECT_NAME}_postgres
+    container_name: d_${COMPOSE_PROJECT_NAME}_pg
     build:
       context: ./docker/dev/postgres
     restart: always
     env_file:
       - .env
       - dev.env
-      - postgres.env
     volumes:
       - type: volume
         source: pg_data
@@ -21,8 +20,8 @@ services:
       - backend
 
   web:
-    image: ${COMPOSE_PROJECT_NAME}_web
-    container_name: ${COMPOSE_PROJECT_NAME}_web
+    image: dev_${COMPOSE_PROJECT_NAME}_web
+    container_name: d_${COMPOSE_PROJECT_NAME}_web
     build:
       dockerfile: ./docker/dev/web/Dockerfile
       context: .
@@ -31,14 +30,13 @@ services:
     env_file:
       - .env
       - dev.env
-      - postgres.env
     volumes:
       - .:/code
     ports:
-      - "${WEB_PORT}:${WEB_PORT}"
-      - "${DEBUG_PORT}:${DEBUG_PORT}"
+      - "8012:8012"
+      - "8898:8898"
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:${WEB_PORT}"
+      sh -c "python manage.py runserver 0.0.0.0:8012"
     networks:
       - backend
 
