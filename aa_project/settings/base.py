@@ -24,6 +24,7 @@ DEFAULT_DJANGO_APPS = [
 # Additional third party applications
 THIRD_PARTY_APPS = [
     "webpack_loader",
+    "django_extensions",
 ]
 
 # Apps containing publically accessible data
@@ -117,3 +118,17 @@ STATICFILES_FINDERS = [
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Django Shell Plus Additional Imports
+SHELL_PLUS_IMPORTS = [
+    "from django.apps import apps",
+    "import pathlib",
+    "import sys",
+    "import os",
+    "import datetime",
+    "import re",
+    "import random",
+    "import math",
+    "from rich import inspect, pretty, print",
+    "from rich.console import Console",
+]

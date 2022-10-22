@@ -3,8 +3,8 @@ from aa_project.settings.base import *
 
 DEBUG = False
 
-# TODO: Configure for Prod
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# ALLOWED_HOSTS = ['*']
 
 # Static files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'

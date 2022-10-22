@@ -14,7 +14,6 @@ INTERNAL_IPS = [
 # For Django Debug Toolbar and Django Extensions to be used in dev
 INSTALLED_APPS += [
     'debug_toolbar',
-    'django_extensions',
 ]
 
 # For Django Debug Toolbar to be used in local dockerized dev environment
@@ -47,20 +46,6 @@ def skip_debug_toolbar_requests(record):
     """Prevent logging of debug toolbar requests to the console"""
     return not str(record.args[0]).startswith('GET /static/debug_toolbar/')
 
-
-# Django Shell Plus Additional Imports
-SHELL_PLUS_IMPORTS = [
-    "from django.apps import apps",
-    "import pathlib",
-    "import sys",
-    "import os",
-    "import datetime",
-    "import re",
-    "import random",
-    "import math",
-    "from rich import inspect, pretty, print",
-    "from rich.console import Console",
-]
 
 # Logging Configuration (including colorised output from Rich)
 LOGGING = {

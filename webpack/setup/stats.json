@@ -1,56 +1,6 @@
 {
   "status": "done",
   "assets": {
-    "css/base.css": {
-      "name": "css/base.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.css",
-      "publicPath": "/static/bundles/css/base.css"
-    },
-    "js/base.js": {
-      "name": "js/base.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.js",
-      "publicPath": "/static/bundles/js/base.js"
-    },
-    "css/appointments.css": {
-      "name": "css/appointments.css",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/appointments.css",
-      "publicPath": "/static/bundles/css/appointments.css"
-    },
-    "js/appointments.js": {
-      "name": "js/appointments.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.js",
-      "publicPath": "/static/bundles/js/appointments.js"
-    },
-    "js/circle.js": {
-      "name": "js/circle.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.js",
-      "publicPath": "/static/bundles/js/circle.js"
-    },
-    "js/runtime.js": {
-      "name": "js/runtime.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.js",
-      "publicPath": "/static/bundles/js/runtime.js"
-    },
-    "js/flatpickr.js": {
-      "name": "js/flatpickr.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.js",
-      "publicPath": "/static/bundles/js/flatpickr.js"
-    },
-    "js/lodash.js": {
-      "name": "js/lodash.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.js",
-      "publicPath": "/static/bundles/js/lodash.js"
-    },
-    "js/htmx.js": {
-      "name": "js/htmx.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.js",
-      "publicPath": "/static/bundles/js/htmx.js"
-    },
-    "js/alpinejs.js": {
-      "name": "js/alpinejs.js",
-      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.js",
-      "publicPath": "/static/bundles/js/alpinejs.js"
-    },
     "images/header.jpg": {
       "name": "images/header.jpg",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/header.jpg",
@@ -60,24 +10,147 @@
       "name": "images/logo.png",
       "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/images/logo.png",
       "publicPath": "/static/bundles/images/logo.png"
+    },
+    "css/base.4bdcceaafd5462300604.css": {
+      "name": "css/base.4bdcceaafd5462300604.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.4bdcceaafd5462300604.css",
+      "publicPath": "/static/bundles/css/base.4bdcceaafd5462300604.css"
+    },
+    "js/base.1217a9f4bb34.js": {
+      "name": "js/base.1217a9f4bb34.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.1217a9f4bb34.js",
+      "publicPath": "/static/bundles/js/base.1217a9f4bb34.js"
+    },
+    "css/appointments.2c8f5105b7b5aaaeec49.css": {
+      "name": "css/appointments.2c8f5105b7b5aaaeec49.css",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/appointments.2c8f5105b7b5aaaeec49.css",
+      "publicPath": "/static/bundles/css/appointments.2c8f5105b7b5aaaeec49.css"
+    },
+    "js/appointments.0ebf9a57f1d2.js": {
+      "name": "js/appointments.0ebf9a57f1d2.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.0ebf9a57f1d2.js",
+      "publicPath": "/static/bundles/js/appointments.0ebf9a57f1d2.js"
+    },
+    "js/circle.65c888cc8bbd.js": {
+      "name": "js/circle.65c888cc8bbd.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.65c888cc8bbd.js",
+      "publicPath": "/static/bundles/js/circle.65c888cc8bbd.js"
+    },
+    "js/runtime.0cbf0b5a98ce.js": {
+      "name": "js/runtime.0cbf0b5a98ce.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.0cbf0b5a98ce.js",
+      "publicPath": "/static/bundles/js/runtime.0cbf0b5a98ce.js"
+    },
+    "js/flatpickr.cc16b137ed63.js": {
+      "name": "js/flatpickr.cc16b137ed63.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.cc16b137ed63.js",
+      "publicPath": "/static/bundles/js/flatpickr.cc16b137ed63.js"
+    },
+    "js/lodash.7573298e3b87.js": {
+      "name": "js/lodash.7573298e3b87.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.7573298e3b87.js",
+      "publicPath": "/static/bundles/js/lodash.7573298e3b87.js"
+    },
+    "js/htmx.9ad499fc9575.js": {
+      "name": "js/htmx.9ad499fc9575.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.9ad499fc9575.js",
+      "publicPath": "/static/bundles/js/htmx.9ad499fc9575.js"
+    },
+    "js/alpinejs.00c1669d58ae.js": {
+      "name": "js/alpinejs.00c1669d58ae.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.00c1669d58ae.js",
+      "publicPath": "/static/bundles/js/alpinejs.00c1669d58ae.js"
+    },
+    "js/236.1bf8d932bf00.js": {
+      "name": "js/236.1bf8d932bf00.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/236.1bf8d932bf00.js",
+      "publicPath": "/static/bundles/js/236.1bf8d932bf00.js"
+    },
+    "js/825.15b7a49588b4.js": {
+      "name": "js/825.15b7a49588b4.js",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/825.15b7a49588b4.js",
+      "publicPath": "/static/bundles/js/825.15b7a49588b4.js"
+    },
+    "css/base.4bdcceaafd5462300604.css.map": {
+      "name": "css/base.4bdcceaafd5462300604.css.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/base.4bdcceaafd5462300604.css.map",
+      "publicPath": "/static/bundles/css/base.4bdcceaafd5462300604.css.map"
+    },
+    "js/base.1217a9f4bb34.js.map": {
+      "name": "js/base.1217a9f4bb34.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/base.1217a9f4bb34.js.map",
+      "publicPath": "/static/bundles/js/base.1217a9f4bb34.js.map"
+    },
+    "css/appointments.2c8f5105b7b5aaaeec49.css.map": {
+      "name": "css/appointments.2c8f5105b7b5aaaeec49.css.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/css/appointments.2c8f5105b7b5aaaeec49.css.map",
+      "publicPath": "/static/bundles/css/appointments.2c8f5105b7b5aaaeec49.css.map"
+    },
+    "js/appointments.0ebf9a57f1d2.js.map": {
+      "name": "js/appointments.0ebf9a57f1d2.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/appointments.0ebf9a57f1d2.js.map",
+      "publicPath": "/static/bundles/js/appointments.0ebf9a57f1d2.js.map"
+    },
+    "js/circle.65c888cc8bbd.js.map": {
+      "name": "js/circle.65c888cc8bbd.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/circle.65c888cc8bbd.js.map",
+      "publicPath": "/static/bundles/js/circle.65c888cc8bbd.js.map"
+    },
+    "js/runtime.0cbf0b5a98ce.js.map": {
+      "name": "js/runtime.0cbf0b5a98ce.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/runtime.0cbf0b5a98ce.js.map",
+      "publicPath": "/static/bundles/js/runtime.0cbf0b5a98ce.js.map"
+    },
+    "js/flatpickr.cc16b137ed63.js.map": {
+      "name": "js/flatpickr.cc16b137ed63.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/flatpickr.cc16b137ed63.js.map",
+      "publicPath": "/static/bundles/js/flatpickr.cc16b137ed63.js.map"
+    },
+    "js/lodash.7573298e3b87.js.map": {
+      "name": "js/lodash.7573298e3b87.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/lodash.7573298e3b87.js.map",
+      "publicPath": "/static/bundles/js/lodash.7573298e3b87.js.map"
+    },
+    "js/htmx.9ad499fc9575.js.map": {
+      "name": "js/htmx.9ad499fc9575.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/htmx.9ad499fc9575.js.map",
+      "publicPath": "/static/bundles/js/htmx.9ad499fc9575.js.map"
+    },
+    "js/alpinejs.00c1669d58ae.js.map": {
+      "name": "js/alpinejs.00c1669d58ae.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/alpinejs.00c1669d58ae.js.map",
+      "publicPath": "/static/bundles/js/alpinejs.00c1669d58ae.js.map"
+    },
+    "js/236.1bf8d932bf00.js.map": {
+      "name": "js/236.1bf8d932bf00.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/236.1bf8d932bf00.js.map",
+      "publicPath": "/static/bundles/js/236.1bf8d932bf00.js.map"
+    },
+    "js/825.15b7a49588b4.js.map": {
+      "name": "js/825.15b7a49588b4.js.map",
+      "path": "/Users/wayne-lambert/dev/django-webpack/src/static/bundles/js/825.15b7a49588b4.js.map",
+      "publicPath": "/static/bundles/js/825.15b7a49588b4.js.map"
     }
   },
   "chunks": {
     "base": [
-      "js/runtime.js",
-      "js/htmx.js",
-      "js/alpinejs.js",
-      "css/base.css",
-      "js/base.js"
+      "js/runtime.0cbf0b5a98ce.js",
+      "js/htmx.9ad499fc9575.js",
+      "js/alpinejs.00c1669d58ae.js",
+      "css/base.4bdcceaafd5462300604.css",
+      "js/base.1217a9f4bb34.js"
     ],
     "appointments": [
-      "js/runtime.js",
-      "css/appointments.css",
-      "js/appointments.js"
+      "js/runtime.0cbf0b5a98ce.js",
+      "js/236.1bf8d932bf00.js",
+      "css/appointments.2c8f5105b7b5aaaeec49.css",
+      "js/appointments.0ebf9a57f1d2.js"
     ],
     "circle": [
-      "js/runtime.js",
-      "js/circle.js"
+      "js/runtime.0cbf0b5a98ce.js",
+      "js/236.1bf8d932bf00.js",
+      "js/825.15b7a49588b4.js",
+      "js/circle.65c888cc8bbd.js"
     ]
   },
   "publicPath": "/static/bundles/"
