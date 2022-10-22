@@ -5,7 +5,7 @@ services:
     image: ${COMPOSE_PROJECT_NAME}_postgres
     container_name: ${COMPOSE_PROJECT_NAME}_postgres
     build:
-      context: ./docker/postgres/dev
+      context: ./docker/dev/postgres
     restart: always
     env_file:
       - .env
@@ -13,7 +13,7 @@ services:
       - postgres.env
     volumes:
       - type: volume
-        source: postgres_volume
+        source: pg_data
         target: /var/lib/postgresql/data/
     ports:
       - "5436:5432"
@@ -47,4 +47,4 @@ networks:
     driver: bridge
 
 volumes:
-  postgres_volume:
+  pg_data:
