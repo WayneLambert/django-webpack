@@ -7,6 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = os.environ['SECRET_KEY']
 DJANGO_SETTINGS_MODULE = os.getenv('DJANGO_SETTINGS_MODULE')
+DEBUG = bool(int(os.environ['DEBUG']))
 
 # Applications supplied within Django core
 DEFAULT_DJANGO_APPS = [
@@ -118,6 +119,17 @@ STATICFILES_FINDERS = [
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# webpack Integration
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not bool(int(os.environ['DEBUG'])),
+        'STATS_FILE': Path(BASE_DIR / 'webpack/setup/stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],
+        'SKIP_COMMON_CHUNKS': True,
+    }
+}
 
 # Django Shell Plus Additional Imports
 SHELL_PLUS_IMPORTS = [
