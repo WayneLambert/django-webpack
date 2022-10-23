@@ -46,6 +46,11 @@ def skip_debug_toolbar_requests(record):
     return not str(record.args[0]).startswith('GET /static/debug_toolbar/')
 
 
+def skip_debug_render_panel_requests(record):
+    """Prevent logging of debug render panel requests to the console"""
+    return not str(record.args[0]).startswith('GET /__debug__/')
+
+
 # Logging Configuration (including colorised output from Rich)
 LOGGING = {
     'version': 1,
@@ -54,6 +59,10 @@ LOGGING = {
         'skip_debug_toolbar_requests': {
             '()': 'django.utils.log.CallbackFilter',
             'callback': skip_debug_toolbar_requests,
+        },
+        'skip_debug_render_panel_requests': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': skip_debug_render_panel_requests,
         },
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue',
@@ -67,7 +76,11 @@ LOGGING = {
             'class': 'rich.logging.RichHandler',
             'formatter': 'rich',
             'level': 'INFO',
-            'filters': ['skip_debug_toolbar_requests', 'require_debug_true'],
+            'filters': [
+                'skip_debug_toolbar_requests',
+                'skip_debug_render_panel_requests',
+                'require_debug_true',
+            ],
             'rich_tracebacks': True,
             'tracebacks_show_locals': True,
         }
