@@ -3,7 +3,7 @@ version: "3.8"
 services:
   postgres:
     image: dev_${COMPOSE_PROJECT_NAME}_postgres
-    container_name: d_${COMPOSE_PROJECT_NAME}_pg
+    container_name: dev_${COMPOSE_PROJECT_NAME}_pg
     build:
       context: ./docker/dev/postgres
     restart: always
@@ -21,7 +21,7 @@ services:
 
   web:
     image: dev_${COMPOSE_PROJECT_NAME}_web
-    container_name: d_${COMPOSE_PROJECT_NAME}_web
+    container_name: dev_${COMPOSE_PROJECT_NAME}_web
     build:
       dockerfile: ./docker/dev/web/Dockerfile
       context: .
