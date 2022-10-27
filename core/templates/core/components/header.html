@@ -1,4 +1,4 @@
-{% load static %}
+{% load webpack_static from webpack_loader %}
 
 <header class="navbar navbar-dark header">
   <div class="branding">
@@ -7,7 +7,7 @@
         <div class="row">
           <h4 class="text-white mx-5">
             <a href="{% url 'core:home' %}">
-              <img src="{% static 'bundles/images/logo.png' %}" alt="" />
+              <img src="{% webpack_static 'images/logo.png' %}" alt="" />
             </a>
           </h4>
         </div>

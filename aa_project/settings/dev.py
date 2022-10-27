@@ -6,8 +6,8 @@ ALLOWED_HOSTS = ['*']
 # Django Debug Toolbar Settings
 INTERNAL_IPS = [
     "127.0.0.1",
-    "0.0.0.0",
     "172.28.1.1",
+    "*",
 ]
 
 # For Django Debug Toolbar and Django Extensions to be used in dev

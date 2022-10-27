@@ -1,4 +1,4 @@
-{% load static %}
+{% load webpack_static from webpack_loader %}
 
 {% load render_bundle from webpack_loader %}
 
@@ -23,7 +23,7 @@
   </head>
   <body>
     {% include 'components/header.html' %}
-    <img src="{% static 'bundles/images/header.jpg' %}" class="header-image" alt="Header"/>
+    <img src="{% webpack_static 'images/header.jpg' %}" class="header-image" alt="Header"/>
     {% block content %}{% endblock content %}
   </body>
 </html>
