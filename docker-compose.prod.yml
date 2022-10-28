@@ -17,8 +17,6 @@ services:
       - static_data:/code/staticfiles
     ports:
       - "8040:8040"
-    command: >
-      sh -c "gunicorn --config './docker/prod/web/gunicorn.conf.py'"
 
   nginx:
     image: prod_${COMPOSE_PROJECT_NAME}_nginx

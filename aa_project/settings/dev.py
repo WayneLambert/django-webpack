@@ -2,6 +2,7 @@ from aa_project.settings.base import *
 
 
 ALLOWED_HOSTS = ['*']
+DEBUG = True
 
 # Django Debug Toolbar Settings
 INTERNAL_IPS = [

@@ -2,12 +2,13 @@ import os
 
 from pathlib import Path
 
+from django.core.management.utils import get_random_secret_key
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = os.environ['SECRET_KEY']
-DJANGO_SETTINGS_MODULE = os.getenv('DJANGO_SETTINGS_MODULE')
-DEBUG = bool(int(os.environ['DEBUG']))
+SECRET_KEY = os.getenv('SECRET_KEY', default=get_random_secret_key())
+DJANGO_SETTINGS_MODULE = os.getenv('DJANGO_SETTINGS_MODULE', default='aa_project.settings.prod')
 
 # Applications supplied within Django core
 DEFAULT_DJANGO_APPS = [
@@ -73,11 +74,11 @@ WSGI_APPLICATION = "aa_project.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASS'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        'NAME': os.getenv('DB_NAME', ''),
+        'USER': os.getenv('DB_USER', ''),
+        'PASSWORD': os.getenv('DB_PASS', ''),
+        'HOST': os.getenv('DB_HOST', ''),
+        'PORT': os.getenv('DB_PORT', ''),
     }
 }
 
@@ -104,13 +105,12 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
+# Django Site Database Table
+SITE_ID = 1
 
 # Static files
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
@@ -123,7 +123,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # webpack Integration
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'CACHE': not bool(int(os.environ['DEBUG'])),
+        'CACHE': not bool(int(os.getenv('DEBUG', 0))),
         'STATS_FILE': Path(BASE_DIR / 'webpack/setup/stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],

@@ -63,6 +63,9 @@ COPY --from=static /code/static/ /code/staticfiles/
 # Copy the source code into working directory
 COPY . .
 
+# Run Django's collection of static files
+RUN python manage.py collectstatic --noinput
+
 # Add a new group for the app
 ARG APP_GROUP=app-grp
 RUN groupadd ${APP_GROUP}
@@ -76,3 +79,6 @@ RUN chown -R ${APP_USER}:${APP_GROUP} .
 
 # Change the user to the application user (i.e. non-root access)
 USER ${APP_USER}
+
+# Run the entrypoint script to initialise Uvicorn via Gunicorn
+ENTRYPOINT [ "sh", "-c", "./docker/prod/web/entrypoint.sh" ]
