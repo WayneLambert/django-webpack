@@ -41,6 +41,8 @@ DEBUG_TOOLBAR_PANELS = [
 ]
 SHOW_TOOLBAR_CALLBACK = True
 
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
 
 def skip_debug_toolbar_requests(record):
     """Prevent logging of debug toolbar requests to the console"""
