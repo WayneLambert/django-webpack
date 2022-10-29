@@ -7,14 +7,13 @@ services:
     build:
       dockerfile: ./docker/prod/web/Dockerfile
       context: .
+    volumes:
+      - ./db.sqlite3:/code/db.sqlite3
     restart: always
     tty: true
     env_file:
       - .env
       - prod.env
-    volumes:
-      - .:/code
-      - static_data:/code/staticfiles
     ports:
       - "8040:8040"
 
@@ -35,5 +34,4 @@ services:
       - web
 
 volumes:
-  pg_data:
   static_data:

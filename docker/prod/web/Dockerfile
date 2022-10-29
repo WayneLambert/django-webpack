@@ -56,15 +56,19 @@ RUN poetry config virtualenvs.create false
 # Install Poetry packages and dependencies (including dev packages)
 RUN poetry install --no-interaction --no-ansi --no-dev
 
-# Using result from previous build stage, copy from generation location
-# to final location
-COPY --from=static /code/static/ /code/staticfiles/
-
 # Copy the source code into working directory
 COPY . .
 
+# Using result from previous build stage, copy from stage's location
+# to destination
+COPY --from=static /code/static/ /code/staticfiles/
+COPY --from=static /code/webpack/ /code/webpack/
+
 # Run Django's collection of static files
 RUN python manage.py collectstatic --noinput
+
+# Tidy up images
+RUN rm -rf static
 
 # Add a new group for the app
 ARG APP_GROUP=app-grp
