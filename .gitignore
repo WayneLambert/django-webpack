@@ -178,3 +178,4 @@ endpoint.rest
 
 node_modules
 static/bundles/*
+docker/prod/task.json
