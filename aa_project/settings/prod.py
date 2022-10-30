@@ -34,9 +34,15 @@ CSRF_COOKIE_SECURE = True
 # SECURE_HSTS_SECONDS = 2592000
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 # SECURE_HSTS_PRELOAD = True
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SECURE_REFERRER_POLICY = 'same-origin'
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
+# Enables form submissions on the site
+CSRF_TRUSTED_DOMAINS = ['https://www.wl-django-webpack.com']
+
+# Allows dynamic IPs from Amazon ECS. Validates '*' in ALLOWED_HOSTS
+ALLOWED_CIDR_NETS = ['172.17.0.0/16']
 
 # URL scheme for building URIs
 EXTERNAL_URL_SCHEME = 'https'

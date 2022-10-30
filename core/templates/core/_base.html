@@ -20,6 +20,9 @@
 
     <!-- Child CSS -->
     {% block additional_styles %}{% endblock additional_styles %}
+
+    <!-- Inserts Django HTMX Script to enable debugging when DEBUG = True -->
+    {% django_htmx_script %}
   </head>
   <body>
     {% include 'components/header.html' %}
