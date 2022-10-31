@@ -39,7 +39,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # Enables form submissions on the site
-CSRF_TRUSTED_DOMAINS = ['https://www.wl-django-webpack.com']
+CSRF_TRUSTED_DOMAINS = ['https://www.wl-django-webpack.com', '0.0.0.0']
 
 # Allows dynamic IPs from Amazon ECS. Validates '*' in ALLOWED_HOSTS
 ALLOWED_CIDR_NETS = ['172.17.0.0/16']
