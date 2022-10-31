@@ -30,7 +30,7 @@ THIRD_PARTY_APPS = [
     'django_extensions',
 ]
 
-# Apps containing publically accessible data
+# Apps containing application-level functionality within the project's code
 PROJECT_APPS = [
     'core',
 ]

@@ -1,4 +1,5 @@
-FROM node:alpine as static
+# Pull official lightweight Node image
+FROM node:alpine as webpack
 
 # Create and set working directory
 WORKDIR /code
@@ -61,13 +62,13 @@ COPY . .
 
 # Using result from previous build stage, copy from stage's location
 # to destination
-COPY --from=static /code/static/ /code/staticfiles/
-COPY --from=static /code/webpack/ /code/webpack/
+COPY --from=webpack /code/static/ /code/staticfiles/
+COPY --from=webpack /code/webpack/ /code/webpack/
 
 # Run Django's collection of static files
 RUN python manage.py collectstatic --noinput
 
-# Tidy up images
+# Tidy up images by removing superfluous `static` directory
 RUN rm -rf static
 
 # Add a new group for the app
@@ -84,5 +85,5 @@ RUN chown -R ${APP_USER}:${APP_GROUP} .
 # Change the user to the application user (i.e. non-root access)
 USER ${APP_USER}
 
-# Run the entrypoint script to initialise Uvicorn via Gunicorn
+# Allows extensibility of entrypoint behaviour by using shell script
 ENTRYPOINT [ "sh", "-c", "./docker/prod/web/entrypoint.sh" ]

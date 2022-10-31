@@ -46,7 +46,7 @@ Thumbs.db
 *__init__.py
 
 # VS Code Settings Files #
-.vscode/*
+.vscode/
 
 # SOPs and Dev Help Files #
 ################################
@@ -166,12 +166,6 @@ celerybeat-schedule
 # Environments
 .env
 .venv/
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-postgres.env
 dev.env
 prod.env
 
