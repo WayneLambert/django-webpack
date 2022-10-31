@@ -14,8 +14,8 @@ services:
     env_file:
       - .env
       - prod.env
-    ports:
-      - "8040:8040"
+    expose:
+      - "8040"
 
   nginx:
     image: prod_${COMPOSE_PROJECT_NAME}_nginx

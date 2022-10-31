@@ -10,7 +10,7 @@ COPY ./package.json ./package-lock.json /code/
 # Copy the webpack directory into the container
 COPY ./webpack /code/webpack/
 
-# Install the Node project's packages and dependencies in the container
+# Install the Node project's packages and dependencies into the container
 RUN npm install
 
 ADD static /code/static/
@@ -29,13 +29,13 @@ LABEL author="Wayne Lambert <wayne.a.lambert@gmail.com>" \
     version="2022.10" \
     description="Docker image for `web` service of Django Webpack in Dev"
 
-# Prevents Python from writing .pyc files
+# Prevent Python from writing .pyc files
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # Causes all output to stdout to be flushed immediately
 ENV PYTHONUNBUFFERED 1
 
-# Set the COLUMNS variable for the terminal's output width
+# Set the COLUMNS variable for fixed terminal output width
 ENV COLUMNS 139
 
 # Create and set working directory
@@ -54,14 +54,13 @@ COPY pyproject.toml poetry.lock ./
 # Do not create a virtual environment
 RUN poetry config virtualenvs.create false
 
-# Install Poetry packages and dependencies (including dev packages)
+# Install Poetry packages and dependencies (only Prod packages)
 RUN poetry install --no-interaction --no-ansi --no-dev
 
 # Copy the source code into working directory
 COPY . .
 
-# Using result from previous build stage, copy from stage's location
-# to destination
+# Copy resulting directories/files from previous stage to container destination
 COPY --from=webpack /code/static/ /code/staticfiles/
 COPY --from=webpack /code/webpack/ /code/webpack/
 
@@ -82,7 +81,7 @@ RUN groupadd ${APP_GROUP}
 ARG APP_USER=app-usr
 RUN useradd --create-home --gid ${APP_GROUP} ${APP_USER}
 
-# Recursively change the user:group of the directory
+# Recursively change the ownership (i.e. user:group) of the directory
 RUN chown -R ${APP_USER}:${APP_GROUP} .
 
 # Change the user to the application user (i.e. non-root access)
