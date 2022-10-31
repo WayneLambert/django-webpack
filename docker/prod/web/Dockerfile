@@ -71,6 +71,9 @@ RUN python manage.py collectstatic --noinput
 # Tidy up images by removing superfluous `static` directory
 RUN rm -rf static
 
+# Expose port 8040
+EXPOSE 8040
+
 # Add a new group for the app
 ARG APP_GROUP=app-grp
 RUN groupadd ${APP_GROUP}
