@@ -88,4 +88,4 @@ RUN chown -R ${APP_USER}:${APP_GROUP} .
 USER ${APP_USER}
 
 # Allows extensibility of entrypoint behaviour by using shell script
-ENTRYPOINT [ "sh", "-c", "./docker/prod/web/entrypoint.sh" ]
+CMD [ "sh", "-c", "./docker/prod/web/entrypoint.sh" ]
