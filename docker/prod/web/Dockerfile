@@ -67,6 +67,9 @@ COPY --from=webpack /code/webpack/ /code/webpack/
 # Run Django's collection of static files
 RUN python manage.py collectstatic --noinput
 
+# Migrate the database
+RUN python manage.py migrate
+
 # Tidy up images by removing superfluous `static` directory
 RUN rm -rf static
 
