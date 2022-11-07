@@ -31,7 +31,7 @@
 
 # OS generated files #
 ######################
-.DS_Store
+**.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
@@ -41,27 +41,11 @@ Thumbs.db
 
 # Python Directories and Files #
 ################################
-*__pycache__*
+**__pycache__*
 *__init__.py
 
 # VS Code Settings Files #
 .vscode/
-
-# SOPs and Dev Help Files #
-################################
-
-
-# React Package Folders
-# dependencies
-*/.node_modules
-aa-front-end/.pnp
-aa-front-end/.pnp.js
-
-# testing
-aa-front-end/coverage
-
-# production
-aa-front-end/build
 
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
@@ -166,6 +150,9 @@ celerybeat-schedule
 .venv/
 dev.env
 prod.env
+
+# Project Items
+**.task.json
 
 # Spyder project settings
 .spyderproject

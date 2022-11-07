@@ -4,9 +4,6 @@ from aa_project.settings.base import *
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(" ")
 DEBUG = False
 
-# Database Configuration
-DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}}
-
 # Django SES Email Backend Settings
 EMAIL_BACKEND = 'django_ses.SESBackend'
 AWS_SES_REGION_NAME = 'eu-west-1'
