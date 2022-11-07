@@ -152,6 +152,7 @@ dev.env
 prod.env
 
 # Project Items
+*/.node_modules
 **.task.json
 
 # Spyder project settings
