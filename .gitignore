@@ -179,3 +179,9 @@ endpoint.rest
 node_modules
 static/bundles/*
 docker/prod/task.json
+
+# Terraform
+terraform/*.terraform/*
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate*
+terraform/plans/tf_plan.txt

@@ -20,6 +20,8 @@ uvicorn = "^0.18.3"
 gunicorn = "^20.1.0"
 django-ses = "^3.2.1"
 django-allow-cidr = "^0.5.0"
+boto3 = "1.26.8"
+click = "8.1.3"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = "3.7.0"
@@ -140,6 +142,8 @@ sections = [
 known_django = "django"
 known_third_party = [
   "rich",
+  "boto3",
+  "click",
 ]
 known_local_folder = [
   "core",
