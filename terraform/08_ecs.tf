@@ -23,14 +23,29 @@ data "template_file" "app" {
   template = file("templates/django_app.json.tpl")
 
   vars = {
-    docker_image_url_django = var.docker_image_url_django
-    docker_image_url_nginx  = var.docker_image_url_nginx
-    region                  = var.region
-    rds_db_name             = var.rds_db_name
-    rds_username            = var.rds_username
-    rds_password            = var.rds_password
-    rds_hostname            = aws_db_instance.production.address
-    allowed_hosts           = var.allowed_hosts
+    docker_image_url_django     = var.docker_image_url_django
+    docker_image_url_nginx      = var.docker_image_url_nginx
+    region                      = var.region
+    secret_key                  = var.secret_key
+    django_project_name         = var.django_project_name
+    compose_project_name        = var.compose_project_name
+    django_settings_module      = var.django_settings_module
+    allowed_hosts               = var.allowed_hosts
+    web_host                    = var.web_host
+    web_port                    = var.web_port
+    aws_ses_access_key_id       = var.aws_ses_access_key_id
+    aws_ses_secret_access_key   = var.aws_ses_secret_access_key
+    aws_email_host_ses          = var.aws_email_host_ses
+    aws_email_host_user_ses     = var.aws_email_host_user_ses
+    aws_email_host_password_ses = var.aws_email_host_password_ses
+    aws_default_from_email_ses  = var.aws_default_from_email_ses
+    rds_db_identifier           = var.rds_db_identifier
+    rds_db_name                 = var.rds_db_name
+    rds_username                = var.rds_username
+    rds_password                = var.rds_password
+    rds_port                    = var.rds_port
+    rds_hostname                = aws_db_instance.production.address
+    certificate_arn             = var.certificate_arn
   }
 }
 

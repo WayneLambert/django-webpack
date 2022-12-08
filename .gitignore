@@ -186,3 +186,4 @@ terraform/.terraform.lock.hcl
 terraform/terraform.tfstate*
 terraform/plans/tf_plan.txt
 terraform/scripts/secrets.sh
+terraform/.terraform.tfstate.lock.info

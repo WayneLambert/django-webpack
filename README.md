@@ -30,3 +30,11 @@ It is also used to:
 - Ensure the nginx directives within the `nginx.conf` file refers to the `0.0.0.0` server
 - Build the prod images with `docker compose --file docker-compose.prod.yml build`
 - Bring the prod containers up with `docker compose --file docker-compose.prod.yml up`
+
+## Deploying the Project to AWS
+
+- Source the secrets into the environment using `source terraform/scripts/secrets.sh`
+- Navigate into the terraform directory: `cd terraform`
+- Initialise the project (if not done already): `terraform init`
+- Plan the infrastructure to be built: `terraform plan -no-color > plans/tf_plan.txt`
+- Apply the changes of the plan: `terraform apply`

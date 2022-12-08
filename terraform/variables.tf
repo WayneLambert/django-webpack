@@ -45,7 +45,7 @@ variable "ami" {
   description = "Which Amazon Machine Image (AMI) to spawn."
 }
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t2.micro"
 }
 variable "docker_image_url_django" {
@@ -59,10 +59,6 @@ variable "docker_image_url_nginx" {
 variable "app_count" {
   description = "Number of Docker containers to run"
   default     = 2
-}
-variable "allowed_hosts" {
-  description = "Domain name for allowed hosts"
-  default     = "wl-django-webpack.com"
 }
 
 # Cloudwatch Logs
@@ -103,7 +99,7 @@ variable "compose_project_name" {
 variable "django_settings_module" {
   description = "Module for configuration settings for Django project"
 }
-variable "allowed_host" {
+variable "allowed_hosts" {
   description = "List of allowed hosts for the application"
 }
 variable "web_host" {
@@ -117,7 +113,7 @@ variable "web_port" {
 variable "aws_ses_access_key_id" {
   description = "SES access key ID"
 }
-variable "aws_ses_secret_access_key_id" {
+variable "aws_ses_secret_access_key" {
   description = "SES secret access key"
 }
 variable "aws_email_host_ses" {

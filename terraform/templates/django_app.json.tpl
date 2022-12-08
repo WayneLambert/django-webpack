@@ -8,7 +8,7 @@
         "links": [],
         "portMappings": [
             {
-                "containerPort": "${web_port}",
+                "containerPort": 8040,
                 "hostPort": 0,
                 "protocol": "tcp"
             }
@@ -36,19 +36,19 @@
             },
             {
                 "name": "EMAIL_HOST_SES",
-                "value": "${email_host_ses}"
+                "value": "${aws_email_host_ses}"
             },
             {
                 "name": "EMAIL_HOST_USER_SES",
-                "value": "${email_host_user_ses}"
+                "value": "${aws_email_host_user_ses}"
             },
             {
                 "name": "EMAIL_HOST_PASSWORD_SES",
-                "value": "${email_host_password_ses}"
+                "value": "${aws_email_host_password_ses}"
             },
             {
                 "name": "DEFAULT_FROM_EMAIL_SES",
-                "value": "${default_from_email_ses}"
+                "value": "${aws_default_from_email_ses}"
             },
             {
                 "name": "DJANGO_SETTINGS_MODULE",
