@@ -9,12 +9,13 @@ It is also used to:
 - Run experiments with webpack
 - Experiment with HTMX
 - Experiment with Alpine.js
-- Integrate third-party JavaScript libraries
-- Setup of reverse proxy with nginx
-- Setup of nginx for serving static files
-- Setup of Uvicorn using Gunicorn workers
-- Demonstration of serving API endpoints using Django Ninja
-- Canonical reference for a project structure
+- Integration of third-party JavaScript libraries
+- Demonstrate the setup of reverse proxy with nginx
+- Demonstrate the setup of nginx for serving static files
+- Demonstrate the setup of Uvicorn using Gunicorn workers
+- Demonstrate serving API endpoints using Django Ninja
+- Demonstrate a deployment pattern using AWS services and Terraform IaC Configuration
+- Have a canonical reference for a project structure
 
 ## Running the Project in Development
 
