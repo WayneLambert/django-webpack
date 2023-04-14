@@ -22,7 +22,7 @@ WORKDIR /code
 RUN pip install --upgrade pip
 
 # Install the specified version of Poetry
-ENV POETRY_VERSION 1.2.1
+ENV POETRY_VERSION 1.4.2
 RUN pip install poetry==${POETRY_VERSION}
 
 # Copy the package management files into the container
