@@ -8,7 +8,7 @@ authors = ["Wayne Lambert <wayne.a.lambert@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "==3.10.7"
-Django = "4.2.0"
+Django = "4.2.21"
 django-htmx = "^1.14.0"
 rich = "^13.3.4"
 httpx = "^0.24.0"
